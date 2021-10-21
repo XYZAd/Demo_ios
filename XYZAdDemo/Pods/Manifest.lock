@@ -1,0 +1,40 @@
+PODS:
+  - BUAdTestMeasurement (4.0.0.0)
+  - Masonry (1.1.0)
+  - XYZAd (0.1.0):
+    - XYZAd/XMAdSDK (= 0.1.0)
+  - XYZAd/XMAdSDK (0.1.0)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - BUAdTestMeasurement
+  - Masonry
+  - XYZAd
+  - YYWebImage
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BUAdTestMeasurement
+    - Masonry
+    - XYZAd
+    - YYCache
+    - YYImage
+    - YYWebImage
+
+SPEC CHECKSUMS:
+  BUAdTestMeasurement: 59e609faaa2a1ccb7a6d50037edac78e0f34b7d8
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  XYZAd: 7af2f97c3d93015ab4407f14676991eb8e2e2a4b
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: ea4ef4448aae94553b83b16b058a5324dd842a4a
+
+COCOAPODS: 1.10.2

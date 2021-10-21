@@ -1,0 +1,31 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+workspace 'XYZAdDemo.xcworkspace'
+
+platform :ios, '9.0'
+
+use_frameworks!
+use_modular_headers!
+
+
+
+
+targetsArray = ['XYZAdDemo']
+
+targetsArray.each do |t|
+    target t do
+        pod 'Masonry'
+        pod 'YYWebImage'
+        pod 'BUAdTestMeasurement'
+        pod 'XYZAd'
+
+    end
+end
+
+
+# 这个是cocoapods的一些配置,官网并没有太详细的说明,一般采取默认就好了,也就是不写.
+#post_install do |installer|
+#   installer.pods_project.targets.each do |target|
+#     puts target.name
+#   end
+#end

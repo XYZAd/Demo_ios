@@ -1,0 +1,6 @@
+framework module XMCommon {
+  umbrella header "XMCommon.h"
+
+  export *
+  module * { export * }
+}

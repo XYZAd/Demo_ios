@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  XYZAdDemo
+//
+//  Created by C on 2021/8/27.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <XMCommon/XMCommon.h>
+#import <XMAd/XMAd.h>
+#import "XMLoading.h"
+#import "Masonry.h"
+
+#define BeginLoading [XMLoading beginLoading];
+#define EndLoading [XMLoading endLoading];
+
+static NSString *const kDemoSplash = @"ceshikaiping";
+static NSString *const kDemoImgText = @"ceshituwen";
+static NSString *const kDemoExpressImtText = @"ceshimobantuwen";
+static NSString *const kDemoRewardVideo = @"ceshijilishiping";
+static NSString *const kDemoFullScreen = @"ceshiquanpingshiping";
+static NSString *const kDemoBanner = @"ceshilunbo";
+static NSString *const kDemoInitial = @"ceshichaping";
+static NSString *const kDemoDraw = @"ceshidraw";
+static NSString *const kDemoExpressDraw = @"ceshimobandraw";
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
