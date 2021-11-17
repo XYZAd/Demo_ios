@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-XYZAdDemo/Pods-XYZAdDemo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${PODS_ROOT}/XYZAd/XYZAd/KS_SDK/KSAdSDK.framework
 ${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework
 ${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework
 ${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework

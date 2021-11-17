@@ -16,8 +16,26 @@ targetsArray.each do |t|
     target t do
         pod 'Masonry'
         pod 'YYWebImage'
-        pod 'BUAdTestMeasurement'
+        
         pod 'XYZAd'
+        #集成禾赞
+        pod 'XYZAd/HZSDK'
+        #集成穿山甲
+        pod 'XYZAd/JRTTSDK'
+        #集成百度
+        pod 'XYZAd/BDSDK'
+        #集成广点通
+        pod 'XYZAd/GDTSDK'
+        #集成MTG
+        pod 'XYZAd/MTGSDK'
+        #集成SigmobAd
+        pod 'XYZAd/SIGMOBSDK'
+        #集成快手
+        pod 'XYZAd/KSMOBSDK'
+        #集成聚合
+        pod 'XYZAd/JHSDK'
+        #集成游可盈
+        pod 'XYZAd/YouKeYingDK'
 
     end
 end

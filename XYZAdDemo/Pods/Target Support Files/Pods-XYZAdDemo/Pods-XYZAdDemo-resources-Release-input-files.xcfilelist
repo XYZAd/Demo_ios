@@ -1,3 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-XYZAdDemo/Pods-XYZAdDemo-resources.sh
-${PODS_ROOT}/BUAdTestMeasurement/BUAdTestMeasurement/BUAdTestMeasurement.bundle
+${PODS_ROOT}/Ads-CN/PangleSDK/LICENSE
+${PODS_ROOT}/Ads-CN/PangleSDK/BUAdSDK.bundle
+${PODS_ROOT}/SigmobAd-iOS/WindSDK/Sigmob.bundle
+${PODS_ROOT}/XYZAd/XYZAd/BD_SDK/baidumobadsdk.bundle
+${PODS_ROOT}/XYZAd/XYZAd/HZ_SDK/HZAdBundle.bundle
 ${PODS_ROOT}/XYZAd/XYZAd/XMAd/XMAdBundle.bundle

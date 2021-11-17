@@ -1,9 +1,43 @@
 PODS:
-  - BUAdTestMeasurement (4.0.0.0)
+  - Ads-CN (4.0.0.1):
+    - Ads-CN/BUAdSDK (= 4.0.0.1)
+  - Ads-CN/BUAdSDK (4.0.0.1):
+    - Ads-CN/BUFoundation
+    - Ads-CN/Domestic
+  - Ads-CN/BUFoundation (4.0.0.1)
+  - Ads-CN/Domestic (4.0.0.1)
+  - GDTMobSDK (4.13.11):
+    - GDTMobSDK/GDTMobSDK (= 4.13.11)
+  - GDTMobSDK/GDTMobSDK (4.13.11)
   - Masonry (1.1.0)
-  - XYZAd (0.1.0):
-    - XYZAd/XMAdSDK (= 0.1.0)
-  - XYZAd/XMAdSDK (0.1.0)
+  - SigmobAd-iOS (3.4.3):
+    - SigmobAd-iOS/WindSDK (= 3.4.3)
+  - SigmobAd-iOS/WindSDK (3.4.3)
+  - XYZAd (1.4.2):
+    - XYZAd/XMAdSDK (= 1.4.2)
+  - XYZAd/BDSDK (1.4.2):
+    - XYZAd/XMAdSDK
+  - XYZAd/GDTSDK (1.4.2):
+    - GDTMobSDK (= 4.13.11)
+    - XYZAd/XMAdSDK
+  - XYZAd/HZSDK (1.4.2):
+    - XYZAd/XMAdSDK
+  - XYZAd/JHSDK (1.4.2):
+    - XYZAd/GDTSDK
+    - XYZAd/XMAdSDK
+  - XYZAd/JRTTSDK (1.4.2):
+    - Ads-CN (= 4.0.0.1)
+    - XYZAd/XMAdSDK
+  - XYZAd/KSMOBSDK (1.4.2):
+    - XYZAd/XMAdSDK
+  - XYZAd/MTGSDK (1.4.2):
+    - XYZAd/XMAdSDK
+  - XYZAd/SIGMOBSDK (1.4.2):
+    - SigmobAd-iOS (= 3.4.3)
+    - XYZAd/XMAdSDK
+  - XYZAd/XMAdSDK (1.4.2)
+  - XYZAd/YouKeYingDK (1.4.2):
+    - XYZAd/XMAdSDK
   - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
@@ -13,28 +47,40 @@ PODS:
     - YYImage
 
 DEPENDENCIES:
-  - BUAdTestMeasurement
   - Masonry
   - XYZAd
+  - XYZAd/BDSDK
+  - XYZAd/GDTSDK
+  - XYZAd/HZSDK
+  - XYZAd/JHSDK
+  - XYZAd/JRTTSDK
+  - XYZAd/KSMOBSDK
+  - XYZAd/MTGSDK
+  - XYZAd/SIGMOBSDK
+  - XYZAd/YouKeYingDK
   - YYWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - BUAdTestMeasurement
+    - Ads-CN
+    - GDTMobSDK
     - Masonry
+    - SigmobAd-iOS
     - XYZAd
     - YYCache
     - YYImage
     - YYWebImage
 
 SPEC CHECKSUMS:
-  BUAdTestMeasurement: 59e609faaa2a1ccb7a6d50037edac78e0f34b7d8
+  Ads-CN: 3e71a8df13766114f385e4e76681a949cbbfeac8
+  GDTMobSDK: 8a733e8b06fa651b8b6d6786a53c07883b85872e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  XYZAd: 7af2f97c3d93015ab4407f14676991eb8e2e2a4b
+  SigmobAd-iOS: ac93929587c58c3cf35f83a27ea8829fb7d1b555
+  XYZAd: 8e90749d4929e7054c853134c70cc23c29e946c0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: ea4ef4448aae94553b83b16b058a5324dd842a4a
+PODFILE CHECKSUM: 7e3630ba5b5c6ac1589a260d830f291a6433a402
 
 COCOAPODS: 1.10.2

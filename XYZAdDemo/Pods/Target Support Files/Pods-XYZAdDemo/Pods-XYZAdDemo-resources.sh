@@ -97,11 +97,19 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/BUAdTestMeasurement/BUAdTestMeasurement/BUAdTestMeasurement.bundle"
+  install_resource "${PODS_ROOT}/Ads-CN/PangleSDK/LICENSE"
+  install_resource "${PODS_ROOT}/Ads-CN/PangleSDK/BUAdSDK.bundle"
+  install_resource "${PODS_ROOT}/SigmobAd-iOS/WindSDK/Sigmob.bundle"
+  install_resource "${PODS_ROOT}/XYZAd/XYZAd/BD_SDK/baidumobadsdk.bundle"
+  install_resource "${PODS_ROOT}/XYZAd/XYZAd/HZ_SDK/HZAdBundle.bundle"
   install_resource "${PODS_ROOT}/XYZAd/XYZAd/XMAd/XMAdBundle.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/BUAdTestMeasurement/BUAdTestMeasurement/BUAdTestMeasurement.bundle"
+  install_resource "${PODS_ROOT}/Ads-CN/PangleSDK/LICENSE"
+  install_resource "${PODS_ROOT}/Ads-CN/PangleSDK/BUAdSDK.bundle"
+  install_resource "${PODS_ROOT}/SigmobAd-iOS/WindSDK/Sigmob.bundle"
+  install_resource "${PODS_ROOT}/XYZAd/XYZAd/BD_SDK/baidumobadsdk.bundle"
+  install_resource "${PODS_ROOT}/XYZAd/XYZAd/HZ_SDK/HZAdBundle.bundle"
   install_resource "${PODS_ROOT}/XYZAd/XYZAd/XMAd/XMAdBundle.bundle"
 fi
 

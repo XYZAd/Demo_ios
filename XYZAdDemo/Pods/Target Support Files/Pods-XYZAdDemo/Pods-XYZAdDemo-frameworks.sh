@@ -176,12 +176,14 @@ code_sign_if_enabled() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${PODS_ROOT}/XYZAd/XYZAd/KS_SDK/KSAdSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${PODS_ROOT}/XYZAd/XYZAd/KS_SDK/KSAdSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework"

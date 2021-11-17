@@ -1,9 +1,10 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/XYZAd
 EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/XYZAd/XYZAd/XMAd"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Ads-CN/PangleSDK" "${PODS_ROOT}/SigmobAd-iOS/WindSDK" "${PODS_ROOT}/XYZAd/XYZAd/BD_SDK" "${PODS_ROOT}/XYZAd/XYZAd/HZ_SDK" "${PODS_ROOT}/XYZAd/XYZAd/JH_SDK" "${PODS_ROOT}/XYZAd/XYZAd/KS_SDK" "${PODS_ROOT}/XYZAd/XYZAd/MTG_SDK" "${PODS_ROOT}/XYZAd/XYZAd/XMAd" "${PODS_ROOT}/XYZAd/XYZAd/YKY_SDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKBanner" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKBidding" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKInterActive" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKInterstitial" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKInterstitialVideo" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKNativeAdvanced" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKReward" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MTGSDKSplash"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_LDFLAGS = $(inherited) -framework "Foundation" -framework "Security" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"c++abi" -l"resolv.9" -l"sqlite3" -l"z" -framework "AVFoundation" -framework "Accelerate" -framework "AdSupport" -framework "AppTrackingTransparency" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreLocation" -framework "CoreMedia" -framework "CoreMotion" -framework "CoreTelephony" -framework "CoreText" -framework "Foundation" -framework "ImageIO" -framework "JavaScriptCore" -framework "MapKit" -framework "MediaPlayer" -framework "MobileCoreServices" -framework "QuartzCore" -framework "SafariServices" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "AdSupport" -weak_framework "Foundation" -weak_framework "UIKit" -weak_framework "WebKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}
