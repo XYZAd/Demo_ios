@@ -13,6 +13,8 @@
 		02B8360226D8D7D7006DE517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B8360126D8D7D7006DE517 /* Assets.xcassets */; };
 		02B8360526D8D7D7006DE517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B8360326D8D7D7006DE517 /* LaunchScreen.storyboard */; };
 		02B8360826D8D7D7006DE517 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8360726D8D7D7006DE517 /* main.m */; };
+		02BB2082274F2AA900F99189 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BB2081274F2AA900F99189 /* AVFoundation.framework */; };
+		02BB2085274F2D3600F99189 /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB2083274F2D3500F99189 /* AdTableViewCell.m */; };
 		02D1C4D926EF25AD00E9E124 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */; };
 		02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BA26EF25AC00E9E124 /* ImageTextViewController.xib */; };
 		02D1C4DB26EF25AD00E9E124 /* DrawVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BB26EF25AC00E9E124 /* DrawVideoViewController.xib */; };
@@ -23,7 +25,6 @@
 		02D1C4E026EF25AD00E9E124 /* ExpressDrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4C526EF25AC00E9E124 /* ExpressDrawViewController.xib */; };
 		02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4C626EF25AD00E9E124 /* ImageTextViewController.m */; };
 		02D1C4E226EF25AD00E9E124 /* XMLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4C726EF25AD00E9E124 /* XMLoading.m */; };
-		02D1C4E326EF25AD00E9E124 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4C826EF25AD00E9E124 /* TableViewCell.xib */; };
 		02D1C4E426EF25AD00E9E124 /* XMIntersititialAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4C926EF25AD00E9E124 /* XMIntersititialAdViewController.xib */; };
 		02D1C4E526EF25AD00E9E124 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4CA26EF25AD00E9E124 /* VideoViewController.m */; };
 		02D1C4E626EF25AD00E9E124 /* ExpressImgTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4CB26EF25AD00E9E124 /* ExpressImgTextViewController.m */; };
@@ -50,6 +51,9 @@
 		02B8360626D8D7D7006DE517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02B8360726D8D7D7006DE517 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		02B8365B26D8D962006DE517 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		02BB2081274F2AA900F99189 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		02BB2083274F2D3500F99189 /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
+		02BB2084274F2D3500F99189 /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
 		02D1C4B726EF25AC00E9E124 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		02D1C4B826EF25AC00E9E124 /* ExpressImgTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressImgTextViewController.h; sourceTree = "<group>"; };
 		02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
@@ -67,7 +71,6 @@
 		02D1C4C526EF25AC00E9E124 /* ExpressDrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpressDrawViewController.xib; sourceTree = "<group>"; };
 		02D1C4C626EF25AD00E9E124 /* ImageTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextViewController.m; sourceTree = "<group>"; };
 		02D1C4C726EF25AD00E9E124 /* XMLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoading.m; sourceTree = "<group>"; };
-		02D1C4C826EF25AD00E9E124 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		02D1C4C926EF25AD00E9E124 /* XMIntersititialAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMIntersititialAdViewController.xib; sourceTree = "<group>"; };
 		02D1C4CA26EF25AD00E9E124 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		02D1C4CB26EF25AD00E9E124 /* ExpressImgTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressImgTextViewController.m; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BB2082274F2AA900F99189 /* AVFoundation.framework in Frameworks */,
 				240248147FFE64A1DED02D32 /* Pods_XYZAdDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +144,8 @@
 		02D1C4B626EF25AC00E9E124 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				02BB2084274F2D3500F99189 /* AdTableViewCell.h */,
+				02BB2083274F2D3500F99189 /* AdTableViewCell.m */,
 				02D1C4D126EF25AD00E9E124 /* BannerViewController.h */,
 				02D1C4C326EF25AC00E9E124 /* BannerViewController.m */,
 				02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */,
@@ -163,7 +169,6 @@
 				02D1C4D826EF25AD00E9E124 /* SplashViewController.xib */,
 				02D1C4CD26EF25AD00E9E124 /* TableViewCell.h */,
 				02D1C4BE26EF25AC00E9E124 /* TableViewCell.m */,
-				02D1C4C826EF25AD00E9E124 /* TableViewCell.xib */,
 				02D1C4C126EF25AC00E9E124 /* TableViewController.h */,
 				02D1C4D226EF25AD00E9E124 /* TableViewController.m */,
 				02D1C4B726EF25AC00E9E124 /* VideoViewController.h */,
@@ -181,6 +186,7 @@
 		D1A0E03CF942BFDE386DA7EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02BB2081274F2AA900F99189 /* AVFoundation.framework */,
 				E5C5F7C6D2BF588C057EB3BB /* Pods_XYZAdDemo.framework */,
 			);
 			name = Frameworks;
@@ -258,7 +264,6 @@
 				02D1C4E426EF25AD00E9E124 /* XMIntersititialAdViewController.xib in Resources */,
 				02B8360226D8D7D7006DE517 /* Assets.xcassets in Resources */,
 				02D1C4E726EF25AD00E9E124 /* FullScreenViewController.xib in Resources */,
-				02D1C4E326EF25AD00E9E124 /* TableViewCell.xib in Resources */,
 				02D1C4DB26EF25AD00E9E124 /* DrawVideoViewController.xib in Resources */,
 				02D1C4ED26EF25AD00E9E124 /* ExpressImgTextViewController.xib in Resources */,
 				02D1C4E026EF25AD00E9E124 /* ExpressDrawViewController.xib in Resources */,
@@ -340,6 +345,7 @@
 				02D1C4E226EF25AD00E9E124 /* XMLoading.m in Sources */,
 				02D1C4E526EF25AD00E9E124 /* VideoViewController.m in Sources */,
 				02D1C4DC26EF25AD00E9E124 /* TableViewCell.m in Sources */,
+				02BB2085274F2D3600F99189 /* AdTableViewCell.m in Sources */,
 				02D1C4E826EF25AD00E9E124 /* ExpressDrawViewController.m in Sources */,
 				02D1C4DF26EF25AD00E9E124 /* DrawVideoViewController.m in Sources */,
 				02B835F726D8D7D1006DE517 /* AppDelegate.m in Sources */,
@@ -500,13 +506,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XYZAdDemo",
-					"$(PROJECT_DIR)/XYZAdDemo/YouKeYing2.2.0.264",
-					"$(PROJECT_DIR)/XYZAdDemo/XMAd",
-					"$(PROJECT_DIR)/XYZAdDemo/HZSDK",
-					"$(PROJECT_DIR)/XYZAdDemo/JRTT_SDK3.8.0.1",
-					"$(PROJECT_DIR)/XYZAdDemo/KSMobileSDK3.3.21",
-					"$(PROJECT_DIR)/XYZAdDemo/JHAdSDK36.092",
-					"$(PROJECT_DIR)/XYZAdDemo/BaiduMobile4.81",
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XYZAdDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XYZAdDemo/Info.plist;

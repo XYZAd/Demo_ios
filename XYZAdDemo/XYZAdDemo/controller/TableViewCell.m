@@ -12,21 +12,50 @@
 
 @implementation XYZFeedCellModel
 
+
+
 @end
 
 @implementation TableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self setup];
     }
     return self;
+}
+
+- (void)setup {
+    _contentImageView = [UIImageView new];
+    [self.contentView addSubview:_contentImageView];
+    
+    _logoImageView = [UIImageView new];
+    _logoImageView.contentMode = UIViewContentModeRight;
+    [self.contentView addSubview:_logoImageView];
+    
+    _contentLabel = [UILabel new];
+    [self.contentView addSubview:_contentLabel];
+    
+    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.bottom.equalTo(@-20);
+        make.left.equalTo(@20);
+        make.height.mas_equalTo(30);
+    }];
+    
+    
+    [_contentImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.equalTo(@20);
+        make.right.equalTo(@-20);
+        make.bottom.equalTo(_contentLabel.mas_top).offset(-20);
+    }];
+   
+    
+    [_logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(80, 24));
+        make.bottom.right.equalTo(_contentImageView);
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,52 +64,10 @@
     // Configure the view for the selected state
 }
 
-- (void)prepareForReuse {
-    [super prepareForReuse];
-    if (self.model.ad) {
-        [self.model.ad unRegistAdContainer];
-    }
-}
-
 - (void)setModel:(XYZFeedCellModel *)model {
     _model = model;
-    self.contentImageView.hidden = NO;
-    if (_model.feedType == XYZFeedType_Ad) {
-        [self.contentImageView yy_setImageWithURL:[NSURL URLWithString:model.ad.coverImage.imgURL] options:YYWebImageOptionSetImageWithFadeAnimation];
-        self.contentLabel.text = model.ad.adTitle;
-        
-        if (model.ad.videoView) {
-            self.contentImageView.hidden = YES;
-            [self.contentView addSubview:model.ad.videoView];
-            [model.ad.videoView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self.contentImageView);
-            }];
-        }
-        if (model.ad.logoImage.image) {
-            self.logoImageView.image = model.ad.logoImage.image;
-        } else {
-            [self.logoImageView yy_setImageWithURL:[NSURL URLWithString:model.ad.logoImage.imageURL] options:0];
-        }
-        [self.contentView bringSubviewToFront:self.logoImageView];
-        [model.ad registerAdContainer:self.contentView ableClickViews:@[self.contentLabel,self.contentImageView] presentVC:[self currentViewController]];
-        
-    } else {
-        self.logoImageView.image = nil;
-        self.contentLabel.text = model.title;
-        [self.contentImageView yy_setImageWithURL:[NSURL URLWithString:model.mainImageUrl] options:0];
-    }
+    self.contentLabel.text = model.title;
+    [self.contentImageView yy_setImageWithURL:[NSURL URLWithString:model.mainImageUrl] options:0];
 }
-
-- (UIViewController *)currentViewController {
-    UIResponder *view = self;
-    while (view.nextResponder) {
-        if ([view.nextResponder isKindOfClass:UIViewController.class]) {
-            break;
-        }
-        view = view.nextResponder;
-    }
-    return (UIViewController *)view.nextResponder;
-}
-
 
 @end

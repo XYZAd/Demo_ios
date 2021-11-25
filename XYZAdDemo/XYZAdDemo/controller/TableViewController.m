@@ -7,11 +7,10 @@
 //
 
 #import "TableViewController.h"
-#import "TableViewCell.h"
-#import "UIImageView+YYWebImage.h"
+#import "AdTableViewCell.h"
 #import "Masonry.h"
 
-@interface TableViewController ()<UITableViewDelegate, UITableViewDataSource> {
+@interface TableViewController ()<UITableViewDelegate, UITableViewDataSource, XMImgTextAdDelegate> {
     NSMutableArray *_feeds;
 }
 
@@ -23,19 +22,48 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tableView = [[UITableView alloc] initWithFrame:UIScreen.mainScreen.bounds style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:UIScreen.mainScreen.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
-    [_tableView registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+//    [_tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"cell"];
+//    [_tableView registerClass:[AdTableViewCell class] forCellReuseIdentifier:@"adcell"];
     _feeds = [NSMutableArray new];
     for (int i = 0; i < 50; i ++) {
         XYZFeedCellModel *model = [XYZFeedCellModel new];
-        if (i % 3 == 2) {
+        model.title = [NSString stringWithFormat:@"%d 这是一个feed测试标题",i];
+        model.mainImageUrl = @"https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF";
+        if (i % 5 == 2) {
             model.feedType = XYZFeedType_Ad;
-        } else {
-            model.title = @"这是一个feed测试标题";
-            model.mainImageUrl = @"https://t7.baidu.com/it/u=963301259,1982396977&fm=193&f=GIF";
+            XMAdParam *para = [XMAdParam new];
+            para.position = kDemoImgText;
+            __weak __typeof(self) weakSelf = self;
+            model.loadingState = XYZLoadingState_Reqing;
+            [XMImgTextAdProvider imgTextAdModelWithParam:para completion:^(XMImgTextAd * _Nullable ad, XMError * _Nullable error) {
+                __strong __typeof(weakSelf) this = weakSelf;
+                if (ad) {
+                    model.ad = ad;
+                    ad.adDelegate = this;
+                    
+                    NSIndexPath *beginIndxP = [this.tableView indexPathForCell:this.tableView.visibleCells.firstObject];
+                    
+                    NSIndexPath *lastIndxP = [this.tableView indexPathForCell:this.tableView.visibleCells.lastObject];
+                    if (i >= beginIndxP.row && i <= lastIndxP.row) {
+                        [this.tableView beginUpdates];
+                        [this.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+                        
+                        [this.tableView endUpdates];
+                    }
+                    
+                    model.loadingState = XYZLoadingState_End;
+                } else {
+                    model.loadingState = XYZLoadingState_Idle;
+                }
+                
+            }];
         }
         [_feeds addObject:model];
     }
@@ -52,33 +80,39 @@
     if (model.feedType == XYZFeedType_Ad) {
         if (model.ad) {
             CGFloat radio = model.ad.coverImage.imgWidth / CGRectGetWidth(UIScreen.mainScreen.bounds);
-            return 30 + model.ad.coverImage.imgHeight / radio;
+            return 30 + model.ad.coverImage.imgHeight / MAX(1, radio);
         }
-        return 0;
+        return CGFLOAT_MIN;
     }
     return 240;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.model = _feeds[indexPath.row];
+    XYZFeedCellModel *model = _feeds[indexPath.row];
+    NSString *identifier = @"cell";
+    Class class = TableViewCell.class;
+    if (model.feedType == XYZFeedType_Ad) {
+        if (model.ad.imageMode == XMFeedAdMode_Text) {
+            identifier = @"textcell";
+            class = AdTextCell.class;
+        } else {
+            identifier = @"adcell";
+            class = AdTableViewCell.class;
+        }
+    }
+    
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[class alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.model = model;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     XYZFeedCellModel *feedModel = [_feeds objectAtIndex:indexPath.row];
-    if (feedModel.feedType == XYZFeedType_Ad && !feedModel.ad) {
-        XMAdParam *para = [XMAdParam new];
-        para.position = kDemoImgText;
-        __weak __typeof(self) weakSelf = self;
-        [XMImgTextAdProvider imgTextAdModelWithParam:para completion:^(XMImgTextAd * _Nullable model, XMError * _Nullable error) {
-            __strong __typeof(weakSelf) this = weakSelf;
-            if (model) {
-                feedModel.ad = model;
-                model.adDelegate = this;
-                [this.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
-            }
-        }];
+    if (feedModel.feedType == XYZFeedType_Ad && !feedModel.ad && feedModel.loadingState == XYZLoadingState_Idle) {
+        
 
     }
 }
@@ -100,6 +134,10 @@
 
 /// 视频加载失败
 - (void)imgTextAdMediaLoadFailed:(XMImgTextAd *)ad error:(XMError *)error {
+    NSLog(@"-------------%s",__func__);
+}
+
+- (void)imgTextAdMediaPlaying:(XMImgTextAd *)ad playerStatusChanged:(XMAdMediaPlayerStatus)status userInfo:(NSDictionary *)userInfo {
     NSLog(@"-------------%s",__func__);
 }
 

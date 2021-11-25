@@ -9,8 +9,11 @@
 #import "XMIntersititialAdViewController.h"
 
 
-@interface XMIntersititialAdViewController () <XMIntersititialAdDelegate> {
+@interface XMIntersititialAdViewController () <XMIntersititialAdDelegate, XMNewIntersititialAdDelegate> {
     XMIntersititialAd *_intersititialAd;
+    XMNewInterstitialAd *_newIntersititialAd;
+    
+    BOOL _newInterStyle;
 }
 @property (weak, nonatomic) IBOutlet UILabel *errorMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *widthLabel;
@@ -27,9 +30,20 @@
     self.widthLabel.text = @(CGRectGetWidth(UIScreen.mainScreen.bounds)).stringValue;
     self.heightLabel.text = @(CGRectGetHeight(UIScreen.mainScreen.bounds)).stringValue;
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"新插屏" style:UIBarButtonItemStylePlain target:self action:@selector(changeStyle)];
+    
     
  
 }
+
+- (void)changeStyle {
+    
+    _newInterStyle = !_newInterStyle;
+    self.navigationItem.rightBarButtonItem.title = _newInterStyle ? @"老插屏" : @"新插屏";
+    self.navigationItem.title = _newInterStyle? @"新插屏广告": @"老插屏广告";
+    
+}
+
 - (IBAction)widthSlider:(UISlider *)sender {
     CGFloat width = CGRectGetWidth(UIScreen.mainScreen.bounds) * sender.value;
     self.widthLabel.text = @((int)width).stringValue;
@@ -41,13 +55,30 @@
 }
 
 - (IBAction)load:(id)sender {
+    //新插屏
+    if (_newInterStyle) {
+        XMAdParam *newparam = [XMAdParam new];
+        newparam.position = kDemoNewInitial;
+        
+        BeginLoading
+        [XMNewInterstitialAdProvider newInterstitialAdModelWithParam:newparam completion:^(XMNewInterstitialAd * _Nullable model, XMError * _Nullable error) {
+            EndLoading
+            self->_errorMessageLabel.text = model ? @"加载成功" : (error.localizedDescription? : @"加载失败");
+            self->_newIntersititialAd = model;
+            model.adDelegate = self;
+        }];
+        return;
+    }
+    
+    //
+    
     XMAdExpressParam *param = [XMAdExpressParam new];
     param.position = kDemoInitial;
     param.size = CGSizeMake(self.widthLabel.text.floatValue, self.heightLabel.text.floatValue);
     BeginLoading
     [XMIntersititialAdProvider intersititialAdModelWithParam:param completion:^(XMIntersititialAd * _Nullable model, XMError * _Nullable error) {
         EndLoading
-        self->_errorMessageLabel.text = model ? @"加载成功" : @"加载失败";
+        self->_errorMessageLabel.text = model ? @"加载成功" : (error.localizedDescription? : @"加载失败");
         self->_intersititialAd = model;
         model.adDelegate = self;
     }];
@@ -59,6 +90,11 @@
         [_intersititialAd showIntersititialAdFromRootVC:self closeCompletion:^{
             self->_errorMessageLabel.text = @"展示成功";
             self->_intersititialAd = nil;
+        }];
+    } else if (_newIntersititialAd) {
+        [_newIntersititialAd showNewIntersititialAdFromRootVC:self closeCompletion:^{
+            self->_errorMessageLabel.text = @"展示成功";
+            self->_newIntersititialAd = nil;
         }];
     } else {
         _errorMessageLabel.text = @"没有广告";
@@ -83,6 +119,26 @@
 
 /// 关闭详情页回调
 - (void)intersititialAdDetailPageDidClose:(XMIntersititialAd *)ad {
+    NSLog(@"===%s====",__FUNCTION__);
+}
+
+
+- (void)newIntersititialAdDidExposure:(XMNewInterstitialAd *)ad {
+    NSLog(@"===%s====",__FUNCTION__);
+}
+
+/// 点击回调
+- (void)newIntersititialAdDidClick:(XMNewInterstitialAd *)ad {
+    NSLog(@"===%s====",__FUNCTION__);
+}
+
+/// 关闭
+- (void)newIntersititialAdDidClose:(XMNewInterstitialAd *)ad {
+    NSLog(@"===%s====",__FUNCTION__);
+}
+
+/// 关闭详情页回调
+- (void)newIntersititialAdDetailPageDidClose:(XMNewInterstitialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
 }
 

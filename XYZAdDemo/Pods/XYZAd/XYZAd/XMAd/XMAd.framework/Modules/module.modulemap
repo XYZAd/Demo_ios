@@ -1,6 +1,0 @@
-framework module XMAd {
-  umbrella header "XMAd.h"
-
-  export *
-  module * { export * }
-}

@@ -23,6 +23,7 @@ static NSString *const kDemoRewardVideo = @"ceshijilishiping";
 static NSString *const kDemoFullScreen = @"ceshiquanpingshiping";
 static NSString *const kDemoBanner = @"ceshilunbo";
 static NSString *const kDemoInitial = @"ceshichaping";
+static NSString *const kDemoNewInitial = @"newinsertnormal";
 static NSString *const kDemoDraw = @"ceshidraw";
 static NSString *const kDemoExpressDraw = @"ceshimobandraw";
 

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 typedef NS_ENUM(NSInteger, XYZFeedType) {
     XYZFeedType_Text     =       0,
     XYZFeedType_Ad       =       1,
+};
+
+typedef NS_ENUM(NSInteger, XYZLoadingState) {
+    XYZLoadingState_Idle            = 0,
+    XYZLoadingState_Reqing          = 1,
+    XYZLoadingState_End             = 2,
 };
 
 @interface XYZFeedCellModel : NSObject
@@ -23,6 +30,8 @@ typedef NS_ENUM(NSInteger, XYZFeedType) {
 
 @property (nonatomic, copy) NSString *mainImageUrl;
 
+@property (nonatomic, assign) XYZLoadingState loadingState;
+
 
 @end
 
@@ -33,11 +42,13 @@ typedef NS_ENUM(NSInteger, XYZFeedType) {
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *contentImageView;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (strong, nonatomic) UIImageView *contentImageView;
+@property (strong, nonatomic) UILabel *contentLabel;
+@property (strong, nonatomic) UIImageView *logoImageView;
 
 @property (nonatomic, strong) XYZFeedCellModel *model;
+
+- (void)setup;
 
 @end
 
