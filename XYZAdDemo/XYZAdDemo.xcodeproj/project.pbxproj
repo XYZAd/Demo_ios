@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025CEF91276983EB008535B5 /* CustomViewController.xib */; };
+		025CEF97276983EC008535B5 /* BulletScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF93276983EC008535B5 /* BulletScreenManager.m */; };
+		025CEF98276983EC008535B5 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF94276983EC008535B5 /* CustomViewController.m */; };
 		02B835F726D8D7D1006DE517 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B835F626D8D7D1006DE517 /* AppDelegate.m */; };
 		02B835FD26D8D7D1006DE517 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B835FC26D8D7D1006DE517 /* ViewController.m */; };
 		02B8360026D8D7D1006DE517 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B835FE26D8D7D1006DE517 /* Main.storyboard */; };
@@ -40,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025CEF91276983EB008535B5 /* CustomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		025CEF92276983EC008535B5 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		025CEF93276983EC008535B5 /* BulletScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletScreenManager.m; sourceTree = "<group>"; };
+		025CEF94276983EC008535B5 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		025CEF95276983EC008535B5 /* BulletScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletScreenManager.h; sourceTree = "<group>"; };
 		02B835F226D8D7D1006DE517 /* XYZAdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYZAdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B835F526D8D7D1006DE517 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02B835F626D8D7D1006DE517 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +152,11 @@
 		02D1C4B626EF25AC00E9E124 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				025CEF95276983EC008535B5 /* BulletScreenManager.h */,
+				025CEF93276983EC008535B5 /* BulletScreenManager.m */,
+				025CEF92276983EC008535B5 /* CustomViewController.h */,
+				025CEF94276983EC008535B5 /* CustomViewController.m */,
+				025CEF91276983EB008535B5 /* CustomViewController.xib */,
 				02BB2084274F2D3500F99189 /* AdTableViewCell.h */,
 				02BB2083274F2D3500F99189 /* AdTableViewCell.m */,
 				02D1C4D126EF25AD00E9E124 /* BannerViewController.h */,
@@ -265,6 +278,7 @@
 				02B8360226D8D7D7006DE517 /* Assets.xcassets in Resources */,
 				02D1C4E726EF25AD00E9E124 /* FullScreenViewController.xib in Resources */,
 				02D1C4DB26EF25AD00E9E124 /* DrawVideoViewController.xib in Resources */,
+				025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */,
 				02D1C4ED26EF25AD00E9E124 /* ExpressImgTextViewController.xib in Resources */,
 				02D1C4E026EF25AD00E9E124 /* ExpressDrawViewController.xib in Resources */,
 				02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */,
@@ -341,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025CEF97276983EC008535B5 /* BulletScreenManager.m in Sources */,
 				02B835FD26D8D7D1006DE517 /* ViewController.m in Sources */,
 				02D1C4E226EF25AD00E9E124 /* XMLoading.m in Sources */,
 				02D1C4E526EF25AD00E9E124 /* VideoViewController.m in Sources */,
@@ -353,6 +368,7 @@
 				02D1C4EB26EF25AD00E9E124 /* XMIntersititialAdViewController.m in Sources */,
 				02B8360826D8D7D7006DE517 /* main.m in Sources */,
 				02D1C4DE26EF25AD00E9E124 /* BannerViewController.m in Sources */,
+				025CEF98276983EC008535B5 /* CustomViewController.m in Sources */,
 				02D1C4EC26EF25AD00E9E124 /* FullScreenViewController.m in Sources */,
 				02D1C4E626EF25AD00E9E124 /* ExpressImgTextViewController.m in Sources */,
 				02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */,

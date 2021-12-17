@@ -120,25 +120,31 @@
 /// 曝光回调
 - (void)imgTextAdDidExposure:(XMImgTextAd *)ad {
     NSLog(@"-------------%s",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)imgTextAdDidClick:(XMImgTextAd *)ad {
     NSLog(@"-------------%s",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)imgTextAdDetailPageDidClose:(XMImgTextAd *)ad {
     NSLog(@"-------------%s",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
 
 /// 视频加载失败
 - (void)imgTextAdMediaLoadFailed:(XMImgTextAd *)ad error:(XMError *)error {
     NSLog(@"-------------%s",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,视频加载失败",__func__]];
 }
 
 - (void)imgTextAdMediaPlaying:(XMImgTextAd *)ad playerStatusChanged:(XMAdMediaPlayerStatus)status userInfo:(NSDictionary *)userInfo {
     NSLog(@"-------------%s",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,视频播放状态改变",__func__]];
 }
+
 
 @end

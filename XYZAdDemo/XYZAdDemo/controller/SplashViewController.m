@@ -70,24 +70,35 @@
 - (void)splashAdDidExposure:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
     self.messageLabel.text = @"开屏曝光";
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)splashAdDidClick:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
     self.messageLabel.text = @"开屏点击";
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
+}
+
+- (void)splashAdWillClose:(XMSplashAdProvider *)provider {
+    NSLog(@"------%s--",__FUNCTION__);
+    self.messageLabel.text = @"开屏即将关闭";
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,即将关闭",__func__]];
 }
 
 /// 关闭
 - (void)splashAdDidClose:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
     self.messageLabel.text = @"开屏关闭";
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
     self.messageLabel.text = @"开屏详情页关闭";
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
+
 
 @end

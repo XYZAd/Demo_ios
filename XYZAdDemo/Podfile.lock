@@ -7,9 +7,9 @@ PODS:
   - Ads-CN/BUFoundation (4.0.0.5)
   - Ads-CN/Domestic (4.0.0.5)
   - BaiduMobAdSDK (4.82)
-  - GDTMobSDK (4.13.26):
-    - GDTMobSDK/GDTMobSDK (= 4.13.26)
-  - GDTMobSDK/GDTMobSDK (4.13.26)
+  - GDTMobSDK (4.13.33):
+    - GDTMobSDK/GDTMobSDK (= 4.13.33)
+  - GDTMobSDK/GDTMobSDK (4.13.33)
   - Masonry (1.1.0)
   - MintegralAdSDK/All (7.0.4.0):
     - MintegralAdSDK/BannerAd
@@ -41,32 +41,32 @@ PODS:
   - SigmobAd-iOS (3.4.3):
     - SigmobAd-iOS/WindSDK (= 3.4.3)
   - SigmobAd-iOS/WindSDK (3.4.3)
-  - XYZAd (1.4.3):
-    - XYZAd/XMAdSDK (= 1.4.3)
-  - XYZAd/BDSDK (1.4.3):
+  - XYZAd (1.4.4):
+    - XYZAd/XMAdSDK (= 1.4.4)
+  - XYZAd/BDSDK (1.4.4):
     - BaiduMobAdSDK (= 4.82)
     - XYZAd/XMAdSDK
-  - XYZAd/GDTSDK (1.4.3):
-    - GDTMobSDK (= 4.13.26)
+  - XYZAd/GDTSDK (1.4.4):
+    - GDTMobSDK (= 4.13.33)
     - XYZAd/XMAdSDK
-  - XYZAd/HZSDK (1.4.3):
+  - XYZAd/HZSDK (1.4.4):
     - XYZAd/XMAdSDK
-  - XYZAd/JHSDK (1.4.3):
-    - GDTMobSDK (= 4.13.26)
+  - XYZAd/JHSDK (1.4.4):
+    - GDTMobSDK (= 4.13.33)
     - XYZAd/XMAdSDK
-  - XYZAd/JRTTSDK (1.4.3):
+  - XYZAd/JRTTSDK (1.4.4):
     - Ads-CN (= 4.0.0.5)
     - XYZAd/XMAdSDK
-  - XYZAd/KSMOBSDK (1.4.3):
+  - XYZAd/KSMOBSDK (1.4.4):
     - XYZAd/XMAdSDK
-  - XYZAd/MTGSDK (1.4.3):
+  - XYZAd/MTGSDK (1.4.4):
     - MintegralAdSDK/All (= 7.0.4)
     - XYZAd/XMAdSDK
-  - XYZAd/SIGMOBSDK (1.4.3):
+  - XYZAd/SIGMOBSDK (1.4.4):
     - SigmobAd-iOS (= 3.4.3)
     - XYZAd/XMAdSDK
-  - XYZAd/XMAdSDK (1.4.3)
-  - XYZAd/YouKeYingDK (1.4.3):
+  - XYZAd/XMAdSDK (1.4.4)
+  - XYZAd/YouKeYingDK (1.4.4):
     - XYZAd/XMAdSDK
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -78,16 +78,16 @@ PODS:
 
 DEPENDENCIES:
   - Masonry
-  - XYZAd (from `../../sdk_ios_pod`)
-  - XYZAd/BDSDK (from `../../sdk_ios_pod`)
-  - XYZAd/GDTSDK (from `../../sdk_ios_pod`)
-  - XYZAd/HZSDK (from `../../sdk_ios_pod`)
-  - XYZAd/JHSDK (from `../../sdk_ios_pod`)
-  - XYZAd/JRTTSDK (from `../../sdk_ios_pod`)
-  - XYZAd/KSMOBSDK (from `../../sdk_ios_pod`)
-  - XYZAd/MTGSDK (from `../../sdk_ios_pod`)
-  - XYZAd/SIGMOBSDK (from `../../sdk_ios_pod`)
-  - XYZAd/YouKeYingDK (from `../../sdk_ios_pod`)
+  - XYZAd (= 1.4.4)
+  - XYZAd/BDSDK (= 1.4.4)
+  - XYZAd/GDTSDK (= 1.4.4)
+  - XYZAd/HZSDK (= 1.4.4)
+  - XYZAd/JHSDK (= 1.4.4)
+  - XYZAd/JRTTSDK (= 1.4.4)
+  - XYZAd/KSMOBSDK (= 1.4.4)
+  - XYZAd/MTGSDK (= 1.4.4)
+  - XYZAd/SIGMOBSDK (= 1.4.4)
+  - XYZAd/YouKeYingDK (= 1.4.4)
   - YYWebImage
 
 SPEC REPOS:
@@ -98,26 +98,23 @@ SPEC REPOS:
     - Masonry
     - MintegralAdSDK
     - SigmobAd-iOS
+    - XYZAd
     - YYCache
     - YYImage
     - YYWebImage
 
-EXTERNAL SOURCES:
-  XYZAd:
-    :path: "../../sdk_ios_pod"
-
 SPEC CHECKSUMS:
   Ads-CN: 85c20c8e557b01f30bd0e1cb68244b90b061a8d5
   BaiduMobAdSDK: 2dd737794691822f25a6b8daa6142455d0fefca3
-  GDTMobSDK: 5fd2b9754e187ea71f9d9dc43154f2248c132255
+  GDTMobSDK: 1364a87c6b80ed2402d025ea46ac56c362401494
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MintegralAdSDK: ce1e0be8fa9fac77d76d91de750b1dda4c1fbd05
   SigmobAd-iOS: ac93929587c58c3cf35f83a27ea8829fb7d1b555
-  XYZAd: 672ffee4c55ae5116576b1d7487ed2cac04bfcb4
+  XYZAd: b441709591d3075434928e04e0a122c9b27824ed
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: afcd3b4f9776ccb89c3e66c9a499ac1734045fb9
+PODFILE CHECKSUM: c80e1b539d08b2781630aecc43142720ac5443d4
 
 COCOAPODS: 1.10.2

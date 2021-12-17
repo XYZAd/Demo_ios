@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *errorMessageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *widthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *heightLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *muteControl;
 
 
 @end
@@ -87,6 +88,7 @@
 
 - (IBAction)show:(id)sender {
     if (_intersititialAd) {
+        _intersititialAd.videoMuted = self.muteControl.on;
         [_intersititialAd showIntersititialAdFromRootVC:self closeCompletion:^{
             self->_errorMessageLabel.text = @"展示成功";
             self->_intersititialAd = nil;
@@ -105,42 +107,49 @@
 /// 曝光回调
 - (void)intersititialAdDidExposure:(XMIntersititialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)intersititialAdDidClick:(XMIntersititialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 /// 关闭
 - (void)intersititialAdDidClose:(XMIntersititialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)intersititialAdDetailPageDidClose:(XMIntersititialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
 
 
 - (void)newIntersititialAdDidExposure:(XMNewInterstitialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)newIntersititialAdDidClick:(XMNewInterstitialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 /// 关闭
 - (void)newIntersititialAdDidClose:(XMNewInterstitialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)newIntersititialAdDetailPageDidClose:(XMNewInterstitialAd *)ad {
     NSLog(@"===%s====",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
-
 @end
 

@@ -12,6 +12,7 @@
     XMFullScreenAd *_fullAd;
 }
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *muteControl;
 
 @end
 
@@ -28,8 +29,8 @@
     BeginLoading
     [XMFullScreenAdProvider fullScreenAdWithParam:pa completion:^(XMFullScreenAd * _Nullable model, XMError * _Nullable error) {
         EndLoading
-        if (error) {
-            self.messageLabel.text = error.localizedDescription;
+        if (error || model == nil) {
+            self.messageLabel.text = error ? error.localizedDescription : @"加载失败";
         } else {
             self.messageLabel.text = @"加载成功";
             _fullAd = model;
@@ -43,6 +44,7 @@
         self.messageLabel.text = @"请先加载广告";
         return;
     }
+    _fullAd.videoMuted = self.muteControl.on;
     _fullAd.adDelegate = self;
     XM_WEAK_SELF;
     [_fullAd showFullScreenAdFromRootVC:self closeCompletion:^(BOOL success, NSString *msg){
@@ -58,21 +60,26 @@
 
 - (void)fullScreenAdDidExposure:(XMFullScreenAd *)ad {
     NSLog(@"________%s______",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)fullScreenAdDidClick:(XMFullScreenAd *)ad {
     NSLog(@"________%s______",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 /// 关闭
 - (void)fullScreenAdDidClose:(XMFullScreenAd *)ad {
     NSLog(@"________%s______",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)fullScreenAdDetailPageDidClose:(XMFullScreenAd *)ad {
     NSLog(@"________%s______",__func__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
+
 
 @end

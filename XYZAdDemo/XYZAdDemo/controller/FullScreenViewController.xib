@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FullScreenViewController">
             <connections>
                 <outlet property="messageLabel" destination="ofp-aZ-mei" id="G3N-UT-PW6"/>
+                <outlet property="muteControl" destination="cSu-lc-UNi" id="WXe-ou-Xn4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,6 +52,19 @@
                         <action selector="showAd:" destination="-1" eventType="touchUpInside" id="IuU-AX-6ro"/>
                     </connections>
                 </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSu-lc-UNi">
+                    <rect key="frame" x="177" y="84" width="62" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="gdR-Zj-tQ0"/>
+                        <constraint firstAttribute="height" constant="35" id="tMi-0h-INR"/>
+                    </constraints>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="静音控制" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YD-DP-LiT">
+                    <rect key="frame" x="282" y="92.5" width="62" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" systemColor="linkColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,15 +72,22 @@
                 <constraint firstItem="ofp-aZ-mei" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="5Tk-Er-UV2"/>
                 <constraint firstItem="vfK-g4-24k" firstAttribute="top" secondItem="ofp-aZ-mei" secondAttribute="bottom" constant="68" id="COV-92-vta"/>
                 <constraint firstItem="ofp-aZ-mei" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="OJr-uT-KdB"/>
+                <constraint firstItem="1YD-DP-LiT" firstAttribute="leading" secondItem="cSu-lc-UNi" secondAttribute="trailing" constant="45" id="PNt-pX-uOQ"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ofp-aZ-mei" secondAttribute="trailing" id="Pf8-Br-725"/>
+                <constraint firstItem="cSu-lc-UNi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="Sgy-lS-hfD"/>
                 <constraint firstItem="bcb-9t-plD" firstAttribute="firstBaseline" secondItem="vfK-g4-24k" secondAttribute="baseline" constant="80" id="WyN-w0-6BT"/>
                 <constraint firstItem="bcb-9t-plD" firstAttribute="centerX" secondItem="vfK-g4-24k" secondAttribute="centerX" id="c8H-KB-N4f"/>
+                <constraint firstItem="1YD-DP-LiT" firstAttribute="centerY" secondItem="cSu-lc-UNi" secondAttribute="centerY" id="dvT-hQ-gN2"/>
+                <constraint firstItem="cSu-lc-UNi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lJl-p2-Xdh"/>
                 <constraint firstItem="vfK-g4-24k" firstAttribute="centerX" secondItem="ofp-aZ-mei" secondAttribute="centerX" id="sZ7-rF-427"/>
             </constraints>
-            <point key="canvasLocation" x="131.8840579710145" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-290" y="88"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

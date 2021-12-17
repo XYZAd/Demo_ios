@@ -68,7 +68,7 @@
     }
     NSMutableArray *array = @[].mutableCopy;
     
-    [array addObjectsFromArray:_imgTextAd.imageMode == XMFeedADMode_VideoImage ? @[self.titleLabel] : @[self.imageView,self.titleLabel]];
+    [array addObjectsFromArray: @[self.imageView,self.titleLabel]];
     
     self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_imgTextAd.coverImage.imgURL]]];
     _titleLabel.text = _imgTextAd.adTitle;
@@ -83,11 +83,9 @@
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.cornerRadius = 20;
     
-    self.imageView.hidden = NO;
     if (_imgTextAd.imageMode == XMFeedADMode_VideoImage) {
-        self.imageView.hidden = YES;
         [self.bgView addSubview:_imgTextAd.videoView];
-        _imgTextAd.videoView.backgroundColor = UIColor.redColor;
+        _imgTextAd.videoView.backgroundColor = UIColor.yellowColor;
         [_imgTextAd.videoView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.bgView);
             make.top.equalTo(self.imageView);
@@ -101,15 +99,15 @@
 }
 
 - (void)imgTextAdDidExposure:(XMImgTextAd *)ad {
-    
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 - (void)imgTextAdDidClick:(XMImgTextAd *)ad {
-    
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 - (void)imgTextAdDetailPageDidClose:(XMImgTextAd *)ad {
-    
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
 
 - (void)imgTextAdDelete:(XMImgTextAd *)ad dislikeReason:(NSString *)reason {

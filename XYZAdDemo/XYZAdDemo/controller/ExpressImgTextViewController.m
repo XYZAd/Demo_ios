@@ -61,10 +61,12 @@
 
 - (void)expressImgTextAdDidClick:(XMExpressImgTextAd *)ad {
     NSLog(@"点击------%s-------",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 - (void)expressImgTextAdDidExposure:(XMExpressImgTextAd *)ad {
     NSLog(@"曝光------%s-------",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 - (UIViewController *)expressImgTextAdPresentViewController {

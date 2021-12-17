@@ -60,18 +60,22 @@ CGSize _size;
 
 - (void)bannerAdDidClick:(XMBannerAd *)ad {
     NSLog(@"----%s---",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
 
 - (void)bannerAdDetailPageDidClose:(XMBannerAd *)ad {
     NSLog(@"----%s---",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
 
 - (void)bannerAdDidExposure:(XMBannerAd *)ad {
     NSLog(@"----%s---",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 - (void)bannerAdDidClose:(XMBannerAd *)ad {
     NSLog(@"----%s---",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 @end

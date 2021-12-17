@@ -7,7 +7,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-
+#import "BulletScreenManager.h"
 #import <XMCommon/XMCommon.h>
 #import <XMAd/XMAd.h>
 #import "XMLoading.h"

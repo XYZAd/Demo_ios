@@ -17,25 +17,25 @@ targetsArray.each do |t|
         pod 'Masonry'
         pod 'YYWebImage'
         
-        pod 'XYZAd', '1.4.3'
+        pod 'XYZAd', '1.4.4.1'
         #集成禾赞
-        pod 'XYZAd/HZSDK', '1.4.3'
+        pod 'XYZAd/HZSDK', '1.4.4.1'
         #集成穿山甲
-        pod 'XYZAd/JRTTSDK', '1.4.3'
+        pod 'XYZAd/JRTTSDK', '1.4.4.1'
         #集成百度
-        pod 'XYZAd/BDSDK', '1.4.3'
+        pod 'XYZAd/BDSDK', '1.4.4.1'
         #集成广点通
-        pod 'XYZAd/GDTSDK', '1.4.3'
+        pod 'XYZAd/GDTSDK', '1.4.4.1'
         #集成MTG
-        pod 'XYZAd/MTGSDK', '1.4.3'
+        pod 'XYZAd/MTGSDK', '1.4.4.1'
         #集成SigmobAd
-        pod 'XYZAd/SIGMOBSDK', '1.4.3'
+        pod 'XYZAd/SIGMOBSDK', '1.4.4.1'
         #集成快手
-        pod 'XYZAd/KSMOBSDK', '1.4.3'
+        pod 'XYZAd/KSMOBSDK', '1.4.4.1'
         #集成聚合
-        pod 'XYZAd/JHSDK', '1.4.3'
+        pod 'XYZAd/JHSDK', '1.4.4.1'
         #集成游可盈
-        pod 'XYZAd/YouKeYingDK', '1.4.3'
+        pod 'XYZAd/YouKeYingSDK', '1.4.4.1'
 
     end
 end
