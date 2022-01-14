@@ -18,6 +18,9 @@
 		02B8360826D8D7D7006DE517 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8360726D8D7D7006DE517 /* main.m */; };
 		02BB2082274F2AA900F99189 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BB2081274F2AA900F99189 /* AVFoundation.framework */; };
 		02BB2085274F2D3600F99189 /* AdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB2083274F2D3500F99189 /* AdTableViewCell.m */; };
+		02C537B027914556009FD8BA /* NativeInterisititialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C537AB27914555009FD8BA /* NativeInterisititialViewController.m */; };
+		02C537B127914556009FD8BA /* NativeInterisititialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C537AC27914555009FD8BA /* NativeInterisititialViewController.xib */; };
+		02C537B227914556009FD8BA /* XMNativeIntersititialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C537AD27914555009FD8BA /* XMNativeIntersititialAdViewController.m */; };
 		02D1C4D926EF25AD00E9E124 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */; };
 		02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BA26EF25AC00E9E124 /* ImageTextViewController.xib */; };
 		02D1C4DB26EF25AD00E9E124 /* DrawVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BB26EF25AC00E9E124 /* DrawVideoViewController.xib */; };
@@ -62,6 +65,11 @@
 		02BB2081274F2AA900F99189 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		02BB2083274F2D3500F99189 /* AdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdTableViewCell.m; sourceTree = "<group>"; };
 		02BB2084274F2D3500F99189 /* AdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdTableViewCell.h; sourceTree = "<group>"; };
+		02C537AB27914555009FD8BA /* NativeInterisititialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeInterisititialViewController.m; sourceTree = "<group>"; };
+		02C537AC27914555009FD8BA /* NativeInterisititialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NativeInterisititialViewController.xib; sourceTree = "<group>"; };
+		02C537AD27914555009FD8BA /* XMNativeIntersititialAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNativeIntersititialAdViewController.m; sourceTree = "<group>"; };
+		02C537AE27914555009FD8BA /* XMNativeIntersititialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNativeIntersititialAdViewController.h; sourceTree = "<group>"; };
+		02C537AF27914555009FD8BA /* NativeInterisititialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeInterisititialViewController.h; sourceTree = "<group>"; };
 		02D1C4B726EF25AC00E9E124 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		02D1C4B826EF25AC00E9E124 /* ExpressImgTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressImgTextViewController.h; sourceTree = "<group>"; };
 		02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
@@ -152,6 +160,11 @@
 		02D1C4B626EF25AC00E9E124 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				02C537AF27914555009FD8BA /* NativeInterisititialViewController.h */,
+				02C537AB27914555009FD8BA /* NativeInterisititialViewController.m */,
+				02C537AC27914555009FD8BA /* NativeInterisititialViewController.xib */,
+				02C537AE27914555009FD8BA /* XMNativeIntersititialAdViewController.h */,
+				02C537AD27914555009FD8BA /* XMNativeIntersititialAdViewController.m */,
 				025CEF95276983EC008535B5 /* BulletScreenManager.h */,
 				025CEF93276983EC008535B5 /* BulletScreenManager.m */,
 				025CEF92276983EC008535B5 /* CustomViewController.h */,
@@ -284,6 +297,7 @@
 				02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */,
 				02D1C4EE26EF25AD00E9E124 /* SplashViewController.xib in Resources */,
 				02D1C4D926EF25AD00E9E124 /* BannerViewController.xib in Resources */,
+				02C537B127914556009FD8BA /* NativeInterisititialViewController.xib in Resources */,
 				02D1C4DD26EF25AD00E9E124 /* VideoViewController.xib in Resources */,
 				02B8360026D8D7D1006DE517 /* Main.storyboard in Resources */,
 			);
@@ -362,6 +376,7 @@
 				02D1C4DC26EF25AD00E9E124 /* TableViewCell.m in Sources */,
 				02BB2085274F2D3600F99189 /* AdTableViewCell.m in Sources */,
 				02D1C4E826EF25AD00E9E124 /* ExpressDrawViewController.m in Sources */,
+				02C537B227914556009FD8BA /* XMNativeIntersititialAdViewController.m in Sources */,
 				02D1C4DF26EF25AD00E9E124 /* DrawVideoViewController.m in Sources */,
 				02B835F726D8D7D1006DE517 /* AppDelegate.m in Sources */,
 				02D1C4EA26EF25AD00E9E124 /* TableViewController.m in Sources */,
@@ -370,6 +385,7 @@
 				02D1C4DE26EF25AD00E9E124 /* BannerViewController.m in Sources */,
 				025CEF98276983EC008535B5 /* CustomViewController.m in Sources */,
 				02D1C4EC26EF25AD00E9E124 /* FullScreenViewController.m in Sources */,
+				02C537B027914556009FD8BA /* NativeInterisititialViewController.m in Sources */,
 				02D1C4E626EF25AD00E9E124 /* ExpressImgTextViewController.m in Sources */,
 				02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */,
 				02D1C4E926EF25AD00E9E124 /* SplashViewController.m in Sources */,
@@ -525,6 +541,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XYZAdDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XYZAdDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,6 +578,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XYZAdDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = XYZAdDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

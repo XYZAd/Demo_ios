@@ -12,6 +12,7 @@
 #import <XMAd/XMAd.h>
 #import "XMLoading.h"
 #import "Masonry.h"
+#import "YYWebImage.h"
 
 #define BeginLoading [XMLoading beginLoading];
 #define EndLoading [XMLoading endLoading];
@@ -26,7 +27,7 @@ static NSString *const kDemoInitial = @"ceshichaping";
 static NSString *const kDemoNewInitial = @"newinsertnormal";
 static NSString *const kDemoDraw = @"ceshidraw";
 static NSString *const kDemoExpressDraw = @"ceshimobandraw";
-
+static NSString *const kDemoNativeInitial = @"selfinsertnormal";
 
 
 

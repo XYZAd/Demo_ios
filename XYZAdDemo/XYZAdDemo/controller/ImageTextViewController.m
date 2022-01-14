@@ -40,6 +40,9 @@
 - (IBAction)load:(id)sender {
     XMAdParam *param = [XMAdParam new];
     param.position = kDemoImgText;
+    
+    //如果集成了京东广告，则需要设置下面这个参数
+    param.nativeImageSize = CGSizeMake(1280, 720);
     BeginLoading
     [XMImgTextAdProvider imgTextAdModelWithParam:param completion:^(XMImgTextAd * _Nullable model, XMError *_Nullable error) {
         EndLoading
