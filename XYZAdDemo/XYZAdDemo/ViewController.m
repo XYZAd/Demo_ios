@@ -7,25 +7,10 @@
 
 
 #import "ViewController.h"
-#import "SplashViewController.h"
-#import "ImageTextViewController.h"
-#import "BannerViewController.h"
-#import "VideoViewController.h"
-#import "XMIntersititialAdViewController.h"
-#import "DrawVideoViewController.h"
-#import "TableViewController.h"
-#import "ExpressDrawViewController.h"
-#import "ExpressImgTextViewController.h"
-#import "FullScreenViewController.h"
-#import "NativeInterisititialViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSArray <NSString *> *_titles;
     NSArray <NSString *> *_controllerClass;
-    XMVideoAd *_videoAd;
-    NSInteger _temp;
-    
-
 }
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -38,8 +23,17 @@
     [super viewDidLoad];
     self.navigationItem.title = [NSString stringWithFormat:@"XMADSDK_ver %@",[XMAdMain sdkVersion]];
     
-    _titles = @[@"开屏",@"图文",@"模版图文",@"激励视频",@"全屏视频",@"轮播广告",@"插屏广告",@"自渲染插屏",@"自渲染draw",@"模版draw",@"信息流"];
-    _controllerClass = @[NSStringFromClass(SplashViewController.class),NSStringFromClass(ImageTextViewController.class),@"ExpressImgTextViewController",NSStringFromClass(VideoViewController.class),@"FullScreenViewController",NSStringFromClass(BannerViewController.class),NSStringFromClass(XMIntersititialAdViewController.class),NSStringFromClass(NativeInterisititialViewController.class),NSStringFromClass(DrawVideoViewController.class),NSStringFromClass(ExpressDrawViewController.class),NSStringFromClass(TableViewController.class)];
+    _titles = @[@"开屏",@"图文",@"Draw广告",@"贴片",@"激励视频",@"全屏视频",@"轮播广告",@"插屏广告",@"自渲染插屏",@"信息流"];
+    _controllerClass = @[@"SplashViewController",
+                         @"ImageTextViewController",
+                         @"DrawAdViewController",
+                         @"PasterViewController",
+                         @"VideoViewController",
+                         @"FullScreenViewController",
+                         @"BannerViewController",
+                         @"XMIntersititialAdViewController",
+                         @"NativeInterisititialViewController",
+                         @"TableViewController"];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.delegate = self;

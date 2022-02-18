@@ -14,21 +14,35 @@
 #import "Masonry.h"
 #import "YYWebImage.h"
 
+static BOOL demo_isBangScreen(void) {
+    static BOOL bangScreen = NO;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (@available(iOS 11.0, *)) {
+            UIWindow *window = UIApplication.sharedApplication.keyWindow;
+            if (window == nil) {
+                //做个容错
+                window = UIApplication.sharedApplication.windows.lastObject;
+            }
+            bangScreen = window.safeAreaInsets.bottom > 0;
+        }
+    });
+    return bangScreen;
+}
+
 #define BeginLoading [XMLoading beginLoading];
 #define EndLoading [XMLoading endLoading];
 
 static NSString *const kDemoSplash = @"ceshikaiping";
 static NSString *const kDemoImgText = @"ceshituwen";
-static NSString *const kDemoExpressImtText = @"ceshimobantuwen";
 static NSString *const kDemoRewardVideo = @"ceshijilishiping";
 static NSString *const kDemoFullScreen = @"ceshiquanpingshiping";
 static NSString *const kDemoBanner = @"ceshilunbo";
 static NSString *const kDemoInitial = @"ceshichaping";
 static NSString *const kDemoNewInitial = @"newinsertnormal";
 static NSString *const kDemoDraw = @"ceshidraw";
-static NSString *const kDemoExpressDraw = @"ceshimobandraw";
 static NSString *const kDemoNativeInitial = @"selfinsertnormal";
-
+static NSString *const kDemoPaster = @"imgpaster";
 
 
 

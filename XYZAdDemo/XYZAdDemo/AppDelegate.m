@@ -71,19 +71,7 @@
     ///下面这个是具体场景，例如冷启动、热启动可以通过下面字段去区分场景
     sparam.gametypeID = @"xxxx";
     CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8);
-    XM_WEAK_SELF;
-    [_provider adWithParam:sparam adsize:size totalTime:5 completion:^(BOOL success, XMError *error) {
-        XM_STRONG_SELF_AutoReturn;
-        if (success) {
-            NSLog(@"请求开屏成功");
-            [strongSelf->_provider presentWithCloseHandle:^{
-                
-                
-            }];
-        } else {
-            
-        }
-    }];
+    [_provider loadSplashAdWithParam:sparam adsize:size totalTime:5];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -98,19 +86,7 @@
     XMAdParam *param = [XMAdParam new];
     param.position = kDemoSplash;
     CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8);
-    XM_WEAK_SELF;
-    [_provider adWithParam:param adsize:size totalTime:5 completion:^(BOOL success, XMError *error) {
-        XM_STRONG_SELF_AutoReturn;
-        if (success) {
-            NSLog(@"请求开屏成功");
-            [strongSelf->_provider presentWithCloseHandle:^{
-                
-                
-            }];
-        } else {
-            
-        }
-    }];
+    [_provider loadSplashAdWithParam:param adsize:size totalTime:5];
 }
 
 /// 这里提供一些打底（默认的一些广告配置），也可以不设置，可以理解为容错，让接口挂掉或者拿不到配置时，走下面协议
@@ -131,23 +107,45 @@
 
 #pragma mark ---splashDelegate
 /// 曝光回调
+- (void)splashAdDidLoad:(XMSplashAdProvider *)provider {
+    NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,加在成功",__func__]];
+    [_provider showSplashAd];
+}
+
+- (void)splashAdPresent:(XMSplashAdProvider *)provider error:(XMError *)error {
+    NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,失败",__func__]];
+}
+
+/// 曝光回调
 - (void)splashAdDidExposure:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
 }
 
 /// 点击回调
 - (void)splashAdDidClick:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
 }
+
+- (void)splashAdWillClose:(XMSplashAdProvider *)provider {
+    NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,即将关闭",__func__]];
+}
+
 
 /// 关闭
 - (void)splashAdDidClose:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
 }
 
 /// 关闭详情页回调
 - (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider {
     NSLog(@"------%s--",__FUNCTION__);
+    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
 }
 
 @end
