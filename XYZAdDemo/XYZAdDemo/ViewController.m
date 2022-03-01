@@ -23,17 +23,18 @@
     [super viewDidLoad];
     self.navigationItem.title = [NSString stringWithFormat:@"XMADSDK_ver %@",[XMAdMain sdkVersion]];
     
-    _titles = @[@"开屏",@"图文",@"Draw广告",@"贴片",@"激励视频",@"全屏视频",@"轮播广告",@"插屏广告",@"自渲染插屏",@"信息流"];
+    _titles = @[@"开屏",@"图文",@"Draw广告",@"贴片",@"自渲染插屏",@"信息流",@"激励视频",@"全屏视频",@"轮播广告",@"插屏广告",@"通用广告"];
     _controllerClass = @[@"SplashViewController",
                          @"ImageTextViewController",
                          @"DrawAdViewController",
                          @"PasterViewController",
+                         @"NativeInterisititialViewController",
+                         @"TableViewController",
                          @"VideoViewController",
                          @"FullScreenViewController",
                          @"BannerViewController",
                          @"XMIntersititialAdViewController",
-                         @"NativeInterisititialViewController",
-                         @"TableViewController"];
+                         @"UniversalViewController"];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.delegate = self;

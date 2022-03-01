@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UniversalViewController">
+            <connections>
+                <outlet property="messageLabel" destination="bNr-1q-KxY" id="GPy-28-G3l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-1q-KxY">
+                    <rect key="frame" x="20" y="134" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0e-UG-nOo">
+                    <rect key="frame" x="157" y="205" width="100" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Ync-tY-3eq"/>
+                        <constraint firstAttribute="width" constant="100" id="upK-at-D3l"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="获取广告"/>
+                    <connections>
+                        <action selector="loadAd:" destination="-1" eventType="touchUpInside" id="qGD-8g-Vw4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8P-4G-EgE">
+                    <rect key="frame" x="162" y="290" width="90" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="6c3-4H-mUc"/>
+                        <constraint firstAttribute="height" constant="35" id="Tsf-Qq-ft0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="预加载"/>
+                    <connections>
+                        <action selector="preloadAd:" destination="-1" eventType="touchUpInside" id="XkF-MR-rMx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulO-fX-qQk">
+                    <rect key="frame" x="162" y="365" width="90" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="3WL-dt-UxI"/>
+                        <constraint firstAttribute="width" constant="90" id="Ru0-Fd-khJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="取缓存"/>
+                    <connections>
+                        <action selector="getCacheAd:" destination="-1" eventType="touchUpInside" id="Xbz-Yy-ueJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DK-Lk-ai8">
+                    <rect key="frame" x="162" y="450" width="90" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="4En-cT-0gl"/>
+                        <constraint firstAttribute="height" constant="31" id="Fhs-Mv-mMb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="展示"/>
+                    <connections>
+                        <action selector="showAd:" destination="-1" eventType="touchUpInside" id="CWx-Nw-Hqq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q0e-UG-nOo" firstAttribute="centerX" secondItem="bNr-1q-KxY" secondAttribute="centerX" id="3QW-ck-Iom"/>
+                <constraint firstItem="Q0e-UG-nOo" firstAttribute="top" secondItem="bNr-1q-KxY" secondAttribute="bottom" constant="50" id="9qQ-5n-Tr2"/>
+                <constraint firstItem="bNr-1q-KxY" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="90" id="DQQ-Wv-4rk"/>
+                <constraint firstItem="bNr-1q-KxY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="PUL-9w-9GV"/>
+                <constraint firstItem="ulO-fX-qQk" firstAttribute="centerX" secondItem="o8P-4G-EgE" secondAttribute="centerX" id="Q03-6T-AUo"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bNr-1q-KxY" secondAttribute="trailing" constant="20" id="eJp-Tx-Q99"/>
+                <constraint firstItem="ulO-fX-qQk" firstAttribute="top" secondItem="o8P-4G-EgE" secondAttribute="bottom" constant="40" id="i4h-H4-2pS"/>
+                <constraint firstItem="1DK-Lk-ai8" firstAttribute="trailing" secondItem="ulO-fX-qQk" secondAttribute="trailing" id="kn9-zf-Xcb"/>
+                <constraint firstItem="1DK-Lk-ai8" firstAttribute="top" secondItem="ulO-fX-qQk" secondAttribute="bottom" constant="50" id="sHI-rf-BkL"/>
+                <constraint firstItem="o8P-4G-EgE" firstAttribute="top" secondItem="Q0e-UG-nOo" secondAttribute="bottom" constant="50" id="vgC-a6-WKc"/>
+                <constraint firstItem="o8P-4G-EgE" firstAttribute="centerX" secondItem="Q0e-UG-nOo" secondAttribute="centerX" id="yy8-as-Du6"/>
+            </constraints>
+            <point key="canvasLocation" x="-259" y="147"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,6 +10,11 @@
 		025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025CEF91276983EB008535B5 /* CustomViewController.xib */; };
 		025CEF97276983EC008535B5 /* BulletScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF93276983EC008535B5 /* BulletScreenManager.m */; };
 		025CEF98276983EC008535B5 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF94276983EC008535B5 /* CustomViewController.m */; };
+		0280936427CCA72400823C7B /* UniversalDrawAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935B27CCA72400823C7B /* UniversalDrawAdView.m */; };
+		0280936527CCA72400823C7B /* UniversalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935C27CCA72400823C7B /* UniversalViewController.m */; };
+		0280936627CCA72400823C7B /* UniversalTextAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935D27CCA72400823C7B /* UniversalTextAdView.m */; };
+		0280936727CCA72400823C7B /* UniversalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0280936027CCA72400823C7B /* UniversalViewController.xib */; };
+		0280936827CCA72400823C7B /* UniversalShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280936127CCA72400823C7B /* UniversalShowViewController.m */; };
 		028B4EAA27BB481F00B7E3E9 /* ImgTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 028B4EA627BB481F00B7E3E9 /* ImgTextCollectionViewCell.m */; };
 		028B4EAB27BB481F00B7E3E9 /* ImgTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028B4EA827BB481F00B7E3E9 /* ImgTextCollectionViewCell.xib */; };
 		028B4EAC27BB481F00B7E3E9 /* PasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028B4EA927BB481F00B7E3E9 /* PasterViewController.m */; };
@@ -51,6 +56,15 @@
 		025CEF93276983EC008535B5 /* BulletScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletScreenManager.m; sourceTree = "<group>"; };
 		025CEF94276983EC008535B5 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		025CEF95276983EC008535B5 /* BulletScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletScreenManager.h; sourceTree = "<group>"; };
+		0280935B27CCA72400823C7B /* UniversalDrawAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalDrawAdView.m; sourceTree = "<group>"; };
+		0280935C27CCA72400823C7B /* UniversalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalViewController.m; sourceTree = "<group>"; };
+		0280935D27CCA72400823C7B /* UniversalTextAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalTextAdView.m; sourceTree = "<group>"; };
+		0280935E27CCA72400823C7B /* UniversalShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalShowViewController.h; sourceTree = "<group>"; };
+		0280935F27CCA72400823C7B /* UniversalDrawAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalDrawAdView.h; sourceTree = "<group>"; };
+		0280936027CCA72400823C7B /* UniversalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversalViewController.xib; sourceTree = "<group>"; };
+		0280936127CCA72400823C7B /* UniversalShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalShowViewController.m; sourceTree = "<group>"; };
+		0280936227CCA72400823C7B /* UniversalTextAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalTextAdView.h; sourceTree = "<group>"; };
+		0280936327CCA72400823C7B /* UniversalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalViewController.h; sourceTree = "<group>"; };
 		028B4EA527BB481F00B7E3E9 /* PasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterViewController.h; sourceTree = "<group>"; };
 		028B4EA627BB481F00B7E3E9 /* ImgTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgTextCollectionViewCell.m; sourceTree = "<group>"; };
 		028B4EA727BB481F00B7E3E9 /* ImgTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgTextCollectionViewCell.h; sourceTree = "<group>"; };
@@ -121,6 +135,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0280935A27CCA72400823C7B /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				0280935F27CCA72400823C7B /* UniversalDrawAdView.h */,
+				0280935B27CCA72400823C7B /* UniversalDrawAdView.m */,
+				0280935E27CCA72400823C7B /* UniversalShowViewController.h */,
+				0280936127CCA72400823C7B /* UniversalShowViewController.m */,
+				0280936227CCA72400823C7B /* UniversalTextAdView.h */,
+				0280935D27CCA72400823C7B /* UniversalTextAdView.m */,
+				0280936327CCA72400823C7B /* UniversalViewController.h */,
+				0280935C27CCA72400823C7B /* UniversalViewController.m */,
+				0280936027CCA72400823C7B /* UniversalViewController.xib */,
+			);
+			path = Universal;
+			sourceTree = "<group>";
+		};
 		028B4EAD27BB4B5D00B7E3E9 /* 图文信息流 */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +314,7 @@
 		02D1C4B626EF25AC00E9E124 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0280935A27CCA72400823C7B /* Universal */,
 				028B4EB527BB4C4000B7E3E9 /* 小视频Draw */,
 				028B4EB427BB4C3100B7E3E9 /* 贴片 */,
 				028B4EB327BB4C2500B7E3E9 /* 原生插屏 */,
@@ -378,6 +409,7 @@
 				02D1C4E426EF25AD00E9E124 /* XMIntersititialAdViewController.xib in Resources */,
 				02B8360226D8D7D7006DE517 /* Assets.xcassets in Resources */,
 				02D1C4E726EF25AD00E9E124 /* FullScreenViewController.xib in Resources */,
+				0280936727CCA72400823C7B /* UniversalViewController.xib in Resources */,
 				025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */,
 				028B4EAB27BB481F00B7E3E9 /* ImgTextCollectionViewCell.xib in Resources */,
 				02D1C4ED26EF25AD00E9E124 /* DrawAdViewController.xib in Resources */,
@@ -463,6 +495,8 @@
 				02D1C4E526EF25AD00E9E124 /* VideoViewController.m in Sources */,
 				02D1C4DC26EF25AD00E9E124 /* TableViewCell.m in Sources */,
 				02BB2085274F2D3600F99189 /* AdTableViewCell.m in Sources */,
+				0280936627CCA72400823C7B /* UniversalTextAdView.m in Sources */,
+				0280936527CCA72400823C7B /* UniversalViewController.m in Sources */,
 				02C537B227914556009FD8BA /* XMNativeIntersititialAdViewController.m in Sources */,
 				02B835F726D8D7D1006DE517 /* AppDelegate.m in Sources */,
 				02D1C4EA26EF25AD00E9E124 /* TableViewController.m in Sources */,
@@ -472,10 +506,12 @@
 				02D1C4DE26EF25AD00E9E124 /* BannerViewController.m in Sources */,
 				028B4EAA27BB481F00B7E3E9 /* ImgTextCollectionViewCell.m in Sources */,
 				025CEF98276983EC008535B5 /* CustomViewController.m in Sources */,
+				0280936827CCA72400823C7B /* UniversalShowViewController.m in Sources */,
 				02D1C4EC26EF25AD00E9E124 /* FullScreenViewController.m in Sources */,
 				02C537B027914556009FD8BA /* NativeInterisititialViewController.m in Sources */,
 				02D1C4E626EF25AD00E9E124 /* DrawAdViewController.m in Sources */,
 				02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */,
+				0280936427CCA72400823C7B /* UniversalDrawAdView.m in Sources */,
 				02D1C4E926EF25AD00E9E124 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

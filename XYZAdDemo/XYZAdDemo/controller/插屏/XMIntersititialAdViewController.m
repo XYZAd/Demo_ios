@@ -56,7 +56,7 @@
 
 - (IBAction)load:(id)sender {
     XMAdIntersititialParam *param = [XMAdIntersititialParam new];
-    param.interstitialType = _newInterStyle ? XMInterstitialTypeNew : XMInterstitialTypeCommon;
+    param.interstitialType = _newInterStyle ? XMAdPositionAdTypeIntersititialV2 : XMAdPositionAdTypeIntersititial;
     param.position = _newInterStyle ? kDemoNewInitial : kDemoInitial;
     param.size = CGSizeMake(300, 450);
     BeginLoading
