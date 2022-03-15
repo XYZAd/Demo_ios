@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import <XMCommon/XMCommon.h>
 #import <XMAd/XMAd.h>
+#import "SplashHelper.h"
 
-@interface AppDelegate () <XMDynamicParamBridge, XMAdConfigBridge, XMSplashAdDelegate> {
-    XMSplashAdProvider *_provider;
+@interface AppDelegate () <XMDynamicParamBridge, XMAdConfigBridge> {
     
     NSTimeInterval _enterBackgroundInterval;
 }
@@ -59,19 +59,9 @@
     adCondig.appids = appids;
     [XMAdMain admainWithConf:adCondig];
     
-    _provider = [[XMSplashAdProvider alloc] init];
-    _provider.adDelegate = self;
-    UIView *view = [UIView new];
-    view.backgroundColor = UIColor.yellowColor;
-    /// 这里一般设置底部的logo神马的
-    _provider.customSplashBottomView = view;
-    XMAdParam *sparam = [XMAdParam new];
-    // 一般这个是区分类型，例如这里是开屏
-    sparam.position = kDemoSplash;
-    ///下面这个是具体场景，例如冷启动、热启动可以通过下面字段去区分场景
-    sparam.gametypeID = @"xxxx";
-    CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8);
-    [_provider loadSplashAdWithParam:sparam adsize:size totalTime:5];
+   //开屏
+    CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8.4);
+    [[SplashHelper sharedInstance] loadSplashWithSize:size];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -83,10 +73,8 @@
         return;
     }
     _enterBackgroundInterval = 0;
-    XMAdParam *param = [XMAdParam new];
-    param.position = kDemoSplash;
-    CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8);
-    [_provider loadSplashAdWithParam:param adsize:size totalTime:5];
+    CGSize size = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen.bounds), CGRectGetHeight(UIScreen.mainScreen.bounds) / 10 * 8.4);
+    [[SplashHelper sharedInstance] loadSplashWithSize:size];
 }
 
 /// 这里提供一些打底（默认的一些广告配置），也可以不设置，可以理解为容错，让接口挂掉或者拿不到配置时，走下面协议
@@ -104,48 +92,5 @@
     return nil;
 }
 
-
-#pragma mark ---splashDelegate
-/// 曝光回调
-- (void)splashAdDidLoad:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,加在成功",__func__]];
-    [_provider showSplashAd];
-}
-
-- (void)splashAdPresent:(XMSplashAdProvider *)provider error:(XMError *)error {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,失败",__func__]];
-}
-
-/// 曝光回调
-- (void)splashAdDidExposure:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
-}
-
-/// 点击回调
-- (void)splashAdDidClick:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
-}
-
-- (void)splashAdWillClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,即将关闭",__func__]];
-}
-
-
-/// 关闭
-- (void)splashAdDidClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
-}
-
-/// 关闭详情页回调
-- (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
-}
 
 @end

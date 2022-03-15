@@ -10,6 +10,7 @@
 		025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025CEF91276983EB008535B5 /* CustomViewController.xib */; };
 		025CEF97276983EC008535B5 /* BulletScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF93276983EC008535B5 /* BulletScreenManager.m */; };
 		025CEF98276983EC008535B5 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CEF94276983EC008535B5 /* CustomViewController.m */; };
+		0273CEE227E0601F006338B4 /* SplashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273CEE027E0601E006338B4 /* SplashHelper.m */; };
 		0280936427CCA72400823C7B /* UniversalDrawAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935B27CCA72400823C7B /* UniversalDrawAdView.m */; };
 		0280936527CCA72400823C7B /* UniversalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935C27CCA72400823C7B /* UniversalViewController.m */; };
 		0280936627CCA72400823C7B /* UniversalTextAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0280935D27CCA72400823C7B /* UniversalTextAdView.m */; };
@@ -56,6 +57,8 @@
 		025CEF93276983EC008535B5 /* BulletScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletScreenManager.m; sourceTree = "<group>"; };
 		025CEF94276983EC008535B5 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		025CEF95276983EC008535B5 /* BulletScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletScreenManager.h; sourceTree = "<group>"; };
+		0273CEE027E0601E006338B4 /* SplashHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashHelper.m; sourceTree = "<group>"; };
+		0273CEE127E0601E006338B4 /* SplashHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashHelper.h; sourceTree = "<group>"; };
 		0280935B27CCA72400823C7B /* UniversalDrawAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalDrawAdView.m; sourceTree = "<group>"; };
 		0280935C27CCA72400823C7B /* UniversalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalViewController.m; sourceTree = "<group>"; };
 		0280935D27CCA72400823C7B /* UniversalTextAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalTextAdView.m; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 		028B4EB227BB4BD700B7E3E9 /* 开屏 */ = {
 			isa = PBXGroup;
 			children = (
+				0273CEE127E0601E006338B4 /* SplashHelper.h */,
+				0273CEE027E0601E006338B4 /* SplashHelper.m */,
 				02D1C4BC26EF25AC00E9E124 /* SplashViewController.h */,
 				02D1C4CF26EF25AD00E9E124 /* SplashViewController.m */,
 				02D1C4D826EF25AD00E9E124 /* SplashViewController.xib */,
@@ -509,6 +514,7 @@
 				0280936827CCA72400823C7B /* UniversalShowViewController.m in Sources */,
 				02D1C4EC26EF25AD00E9E124 /* FullScreenViewController.m in Sources */,
 				02C537B027914556009FD8BA /* NativeInterisititialViewController.m in Sources */,
+				0273CEE227E0601F006338B4 /* SplashHelper.m in Sources */,
 				02D1C4E626EF25AD00E9E124 /* DrawAdViewController.m in Sources */,
 				02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */,
 				0280936427CCA72400823C7B /* UniversalDrawAdView.m in Sources */,

@@ -7,10 +7,10 @@
 //
 
 #import "SplashViewController.h"
+#import "SplashHelper.h"
 
-@interface SplashViewController () <XMSplashAdDelegate> {
+@interface SplashViewController () {
     CGSize _size;
-    XMSplashAdProvider *_provider;
 
     
 }
@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.messageLabel.hidden = YES;
     _size = UIScreen.mainScreen.bounds.size;
     
 }
@@ -37,64 +38,7 @@
 }
 
 - (IBAction)splash:(id)sender {
-    if (_provider == nil) {
-        _provider = [[XMSplashAdProvider alloc] init];
-        _provider.adDelegate = self;
-        UIView *view = [UIView new];
-        view.backgroundColor = UIColor.yellowColor;
-        _provider.customSplashBottomView = view;
-    }
-    XM_WEAK_SELF;
-    BeginLoading
-    XMAdParam *param = [XMAdParam new];
-    param.position = kDemoSplash;
-    [_provider adWithParam:param adsize:_size totalTime:5 completion:^(BOOL success, XMError *error) {
-        XM_STRONG_SELF_AutoReturn;
-        EndLoading
-        NSLog(@"请求开屏结束");
-        if (success) {
-            [strongSelf->_provider presentWithCloseHandle:^{
-                strongSelf.messageLabel.text = @"开屏成功";
-                
-            }];
-        } else {
-            strongSelf.messageLabel.text = error.userInfo[NSLocalizedDescriptionKey];
-        }
-    }];
+    [[SplashHelper sharedInstance] loadSplashWithSize:_size];
 }
-/// 曝光回调
-- (void)splashAdDidExposure:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    self.messageLabel.text = @"开屏曝光";
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,曝光",__func__]];
-}
-
-/// 点击回调
-- (void)splashAdDidClick:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    self.messageLabel.text = @"开屏点击";
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,点击",__func__]];
-}
-
-- (void)splashAdWillClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    self.messageLabel.text = @"开屏即将关闭";
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,即将关闭",__func__]];
-}
-
-/// 关闭
-- (void)splashAdDidClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    self.messageLabel.text = @"开屏关闭";
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,关闭",__func__]];
-}
-
-/// 关闭详情页回调
-- (void)splashAdDetailPageDidClose:(XMSplashAdProvider *)provider {
-    NSLog(@"------%s--",__FUNCTION__);
-    self.messageLabel.text = @"开屏详情页关闭";
-    [[BulletScreenManager sharedInstance] showWithText:[NSString stringWithFormat:@"%s,详情页关闭",__func__]];
-}
-
 
 @end

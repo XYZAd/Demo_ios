@@ -18,33 +18,34 @@ targetsArray.each do |t|
         pod 'YYWebImage'
         
         # :path => '../../sdk_ios_pod'
-        pod 'XYZAd/XMAdSDK', '1.4.8'
+        pod 'XYZAd/XMAdSDK', :path => '../../sdk_ios_pod'
         #集成禾赞
-        pod 'XYZAd/HZSDK', '1.4.8'
+        pod 'XYZAd/HZSDK', :path => '../../sdk_ios_pod'
         #集成穿山甲
-        pod 'XYZAd/JRTTSDK', '1.4.8'
+        pod 'XYZAd/JRTTSDK', :path => '../../sdk_ios_pod'
         #集成百度
-        pod 'XYZAd/BDSDK', '1.4.8'
+        pod 'XYZAd/BDSDK', :path => '../../sdk_ios_pod'
         #集成广点通
-        pod 'XYZAd/GDTSDK', '1.4.8'
+        pod 'XYZAd/GDTSDK', :path => '../../sdk_ios_pod'
         #集成MTG
-        pod 'XYZAd/MTGSDK', '1.4.8'
+        pod 'XYZAd/MTGSDK', :path => '../../sdk_ios_pod'
         #集成SigmobAd
-        pod 'XYZAd/SIGMOBSDK', '1.4.8'
+        pod 'XYZAd/SIGMOBSDK', :path => '../../sdk_ios_pod'
         #集成快手
-        pod 'XYZAd/KSMOBSDK', '1.4.8'
+        pod 'XYZAd/KSMOBSDK', :path => '../../sdk_ios_pod'
         #集成聚合
-        pod 'XYZAd/JHSDK', '1.4.8'
+        pod 'XYZAd/JHSDK', :path => '../../sdk_ios_pod'
         #集成游可盈
-        pod 'XYZAd/YouKeYingSDK', '1.4.8'
+        pod 'XYZAd/YouKeYingSDK', :path => '../../sdk_ios_pod'
         #集成京准通
-        pod 'XYZAd/JDSDK', '1.4.8'
+        pod 'XYZAd/JDSDK', :path => '../../sdk_ios_pod'
         #集成IronSource
-        pod 'XYZAd/IronSourceSDK', '1.4.8'
+        pod 'XYZAd/IronSourceSDK', :path => '../../sdk_ios_pod'
         #集成AdColony
-        pod 'XYZAd/AdColonySDK', '1.4.8'
+        pod 'XYZAd/AdColonySDK', :path => '../../sdk_ios_pod'
         #集成FB
-        pod 'XYZAd/FBAdSDK', '1.4.8'
+        pod 'XYZAd/FBAdSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/GADAdSDK', :path => '../../sdk_ios_pod'
     end
 end
 

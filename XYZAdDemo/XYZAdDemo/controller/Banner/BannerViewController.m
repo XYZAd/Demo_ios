@@ -31,7 +31,6 @@ CGSize _size;
     param.position = kDemoBanner;
     param.autoSwitchInterval = 30;
     param.size = _size;
-    param.viewController = self;
     BeginLoading
     [XMBannerAdProvider bannerAdModelWithParam:param completion:^(XMBannerAd * _Nullable model, XMError * _Nullable error) {
         EndLoading

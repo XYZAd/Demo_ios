@@ -1,80 +1,85 @@
 PODS:
   - AdColony (4.7.2)
-  - Ads-CN (4.2.0.4):
-    - Ads-CN/BUAdSDK (= 4.2.0.4)
-  - Ads-CN/BUAdSDK (4.2.0.4):
+  - Ads-CN (4.2.5.6):
+    - Ads-CN/BUAdSDK (= 4.2.5.6)
+  - Ads-CN/BUAdSDK (4.2.5.6):
     - Ads-CN/BUFoundation
     - Ads-CN/Domestic
-  - Ads-CN/BUFoundation (4.2.0.4)
-  - Ads-CN/Domestic (4.2.0.4)
+  - Ads-CN/BUFoundation (4.2.5.6)
+  - Ads-CN/Domestic (4.2.5.6)
   - BaiduMobAdSDK (4.85)
-  - GDTMobSDK (4.13.42):
-    - GDTMobSDK/GDTMobSDK (= 4.13.42)
-  - GDTMobSDK/GDTMobSDK (4.13.42)
+  - GDTMobSDK (4.13.50):
+    - GDTMobSDK/GDTMobSDK (= 4.13.50)
+  - GDTMobSDK/GDTMobSDK (4.13.50)
   - IronSourceSDK (7.1.12.0)
   - Masonry (1.1.0)
-  - MintegralAdSDK/All (7.0.4.0):
+  - MintegralAdSDK/All (7.1.1.0):
     - MintegralAdSDK/BannerAd
     - MintegralAdSDK/BidNativeAd
-    - MintegralAdSDK/InterActiveAd
     - MintegralAdSDK/InterstitialAd
     - MintegralAdSDK/InterstitialVideoAd
     - MintegralAdSDK/NativeAd
     - MintegralAdSDK/NativeAdvancedAd
+    - MintegralAdSDK/NewInterstitialAd
     - MintegralAdSDK/RewardVideoAd
     - MintegralAdSDK/SplashAd
-  - MintegralAdSDK/BannerAd (7.0.4.0):
+  - MintegralAdSDK/BannerAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/BidNativeAd (7.0.4.0):
+  - MintegralAdSDK/BidNativeAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/InterActiveAd (7.0.4.0):
+  - MintegralAdSDK/InterstitialAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/InterstitialAd (7.0.4.0):
+  - MintegralAdSDK/InterstitialVideoAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/InterstitialVideoAd (7.0.4.0):
+  - MintegralAdSDK/NativeAd (7.1.1.0)
+  - MintegralAdSDK/NativeAdvancedAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/NativeAd (7.0.4.0)
-  - MintegralAdSDK/NativeAdvancedAd (7.0.4.0):
+  - MintegralAdSDK/NewInterstitialAd (7.1.1.0):
+    - MintegralAdSDK/InterstitialVideoAd
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/RewardVideoAd (7.0.4.0):
+  - MintegralAdSDK/RewardVideoAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - MintegralAdSDK/SplashAd (7.0.4.0):
+  - MintegralAdSDK/SplashAd (7.1.1.0):
     - MintegralAdSDK/NativeAd
-  - SigmobAd-iOS (3.4.3):
-    - SigmobAd-iOS/WindSDK (= 3.4.3)
-  - SigmobAd-iOS/WindSDK (3.4.3)
-  - XYZAd/AdColonySDK (1.4.6):
+  - SigmobAd-iOS (3.5.3):
+    - SigmobAd-iOS/WindSDK (= 3.5.3)
+  - SigmobAd-iOS/WindSDK (3.5.3)
+  - XYZAd/AdColonySDK (1.4.9):
     - AdColony (= 4.7.2)
     - XYZAd/XMAdSDK
-  - XYZAd/BDSDK (1.4.6):
+  - XYZAd/BDSDK (1.4.9):
     - BaiduMobAdSDK (= 4.85)
     - XYZAd/XMAdSDK
-  - XYZAd/GDTSDK (1.4.6):
-    - GDTMobSDK (= 4.13.42)
+  - XYZAd/FBAdSDK (1.4.9):
     - XYZAd/XMAdSDK
-  - XYZAd/HZSDK (1.4.6):
+  - XYZAd/GADAdSDK (1.4.9):
     - XYZAd/XMAdSDK
-  - XYZAd/IronSourceSDK (1.4.6):
+  - XYZAd/GDTSDK (1.4.9):
+    - GDTMobSDK (= 4.13.50)
+    - XYZAd/XMAdSDK
+  - XYZAd/HZSDK (1.4.9):
+    - XYZAd/XMAdSDK
+  - XYZAd/IronSourceSDK (1.4.9):
     - IronSourceSDK (= 7.1.12.0)
     - XYZAd/XMAdSDK
-  - XYZAd/JDSDK (1.4.6):
+  - XYZAd/JDSDK (1.4.9):
     - XYZAd/XMAdSDK
-  - XYZAd/JHSDK (1.4.6):
-    - GDTMobSDK (= 4.13.42)
+  - XYZAd/JHSDK (1.4.9):
+    - GDTMobSDK (= 4.13.50)
     - XYZAd/XMAdSDK
-  - XYZAd/JRTTSDK (1.4.6):
-    - Ads-CN (= 4.2.0.4)
+  - XYZAd/JRTTSDK (1.4.9):
+    - Ads-CN (= 4.2.5.6)
     - XYZAd/XMAdSDK
-  - XYZAd/KSMOBSDK (1.4.6):
+  - XYZAd/KSMOBSDK (1.4.9):
     - XYZAd/XMAdSDK
-  - XYZAd/MTGSDK (1.4.6):
-    - MintegralAdSDK/All (= 7.0.4)
+  - XYZAd/MTGSDK (1.4.9):
+    - MintegralAdSDK/All (= 7.1.1)
     - XYZAd/XMAdSDK
-  - XYZAd/SIGMOBSDK (1.4.6):
-    - SigmobAd-iOS (= 3.4.3)
+  - XYZAd/SIGMOBSDK (1.4.9):
+    - SigmobAd-iOS (= 3.5.3)
     - XYZAd/XMAdSDK
-  - XYZAd/XMAdSDK (1.4.6)
-  - XYZAd/YouKeYingSDK (1.4.6):
+  - XYZAd/XMAdSDK (1.4.9)
+  - XYZAd/YouKeYingSDK (1.4.9):
     - XYZAd/XMAdSDK
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -88,6 +93,8 @@ DEPENDENCIES:
   - Masonry
   - XYZAd/AdColonySDK (from `../../sdk_ios_pod`)
   - XYZAd/BDSDK (from `../../sdk_ios_pod`)
+  - XYZAd/FBAdSDK (from `../../sdk_ios_pod`)
+  - XYZAd/GADAdSDK (from `../../sdk_ios_pod`)
   - XYZAd/GDTSDK (from `../../sdk_ios_pod`)
   - XYZAd/HZSDK (from `../../sdk_ios_pod`)
   - XYZAd/IronSourceSDK (from `../../sdk_ios_pod`)
@@ -121,18 +128,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AdColony: 970af2bff1e500c8a681bfcbd85f8054c0f57071
-  Ads-CN: a83895b2011073285ff2e54f0c3b597d7fecb404
+  Ads-CN: 8c9c6be8bafe646514fc30dc266fddc2733a854f
   BaiduMobAdSDK: 1a46c3043d27cc28d835460e956233e6b8a24b66
-  GDTMobSDK: 7e478567111593ea036ff9bd0bf2e0b19b3606cc
+  GDTMobSDK: 59aac3a8f80fb311aee13696754283390bd64c91
   IronSourceSDK: f8c439ff772b2b6f4b826054d661238d4d3c4d53
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MintegralAdSDK: ce1e0be8fa9fac77d76d91de750b1dda4c1fbd05
-  SigmobAd-iOS: ac93929587c58c3cf35f83a27ea8829fb7d1b555
-  XYZAd: 682e53b31c04b37db0ab1b052c87e38d538dfb45
+  MintegralAdSDK: 6f4a39e4801633686b58583e3974b8c7c5c064ef
+  SigmobAd-iOS: 3b63fe0d3db023fad72bebe82cddd29e0b44ab40
+  XYZAd: d500addc8d44df9f4012f38d9d2b421a39ca2964
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 2312425ab1404f16b2c08cf169326341b4301ed5
+PODFILE CHECKSUM: 5c3ce36761830b4bec081656e6429f86e5abbcf9
 
 COCOAPODS: 1.10.2
