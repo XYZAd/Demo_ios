@@ -1,16 +1,24 @@
 PODS:
   - AdColony (4.7.2)
-  - Ads-CN (4.2.5.6):
-    - Ads-CN/BUAdSDK (= 4.2.5.6)
-  - Ads-CN/BUAdSDK (4.2.5.6):
+  - Ads-CN (4.3.0.5):
+    - Ads-CN/BUAdSDK (= 4.3.0.5)
+  - Ads-CN/BUAdSDK (4.3.0.5):
     - Ads-CN/BUFoundation
     - Ads-CN/Domestic
-  - Ads-CN/BUFoundation (4.2.5.6)
-  - Ads-CN/Domestic (4.2.5.6)
+  - Ads-CN/BUFoundation (4.3.0.5):
+    - BURelyFoundation (= 0.0.1.47)
+  - Ads-CN/Domestic (4.3.0.5):
+    - Ads-CN/BUFoundation
+  - AppLovinSDK (11.3.1)
   - BaiduMobAdSDK (4.85)
-  - GDTMobSDK (4.13.50):
-    - GDTMobSDK/GDTMobSDK (= 4.13.50)
-  - GDTMobSDK/GDTMobSDK (4.13.50)
+  - BURelyFoundation (0.0.1.47):
+    - BURelyFoundation/HM (= 0.0.1.47)
+    - BURelyFoundation/NETWork (= 0.0.1.47)
+  - BURelyFoundation/HM (0.0.1.47)
+  - BURelyFoundation/NETWork (0.0.1.47)
+  - GDTMobSDK (4.13.61):
+    - GDTMobSDK/GDTMobSDK (= 4.13.61)
+  - GDTMobSDK/GDTMobSDK (4.13.61)
   - IronSourceSDK (7.1.12.0)
   - Masonry (1.1.0)
   - MintegralAdSDK/All (7.1.1.0):
@@ -44,42 +52,61 @@ PODS:
   - SigmobAd-iOS (3.5.3):
     - SigmobAd-iOS/WindSDK (= 3.5.3)
   - SigmobAd-iOS/WindSDK (3.5.3)
-  - XYZAd/AdColonySDK (1.4.9):
+  - UMCommon (7.3.6):
+    - UMDevice
+  - UMDevice (2.2.0)
+  - UMUnionSDK (1.3.0):
+    - UMCommon
+  - UnityAds (4.0.0)
+  - XYZAd (1.5.2):
+    - XYZAd/XMAdSDK (= 1.5.2)
+  - XYZAd/AdColonySDK (1.5.2):
     - AdColony (= 4.7.2)
     - XYZAd/XMAdSDK
-  - XYZAd/BDSDK (1.4.9):
+  - XYZAd/ALSDK (1.5.2):
+    - AppLovinSDK (= 11.3.1)
+    - XYZAd/XMAdSDK
+  - XYZAd/BDSDK (1.5.2):
     - BaiduMobAdSDK (= 4.85)
     - XYZAd/XMAdSDK
-  - XYZAd/FBAdSDK (1.4.9):
+  - XYZAd/FBAdSDK (1.5.2):
     - XYZAd/XMAdSDK
-  - XYZAd/GADAdSDK (1.4.9):
+  - XYZAd/GADAdSDK (1.5.2):
     - XYZAd/XMAdSDK
-  - XYZAd/GDTSDK (1.4.9):
-    - GDTMobSDK (= 4.13.50)
+  - XYZAd/GDTSDK (1.5.2):
+    - GDTMobSDK (= 4.13.61)
     - XYZAd/XMAdSDK
-  - XYZAd/HZSDK (1.4.9):
+  - XYZAd/HZSDK (1.5.2):
     - XYZAd/XMAdSDK
-  - XYZAd/IronSourceSDK (1.4.9):
+  - XYZAd/IronSourceSDK (1.5.2):
     - IronSourceSDK (= 7.1.12.0)
     - XYZAd/XMAdSDK
-  - XYZAd/JDSDK (1.4.9):
+  - XYZAd/JDSDK (1.5.2):
     - XYZAd/XMAdSDK
-  - XYZAd/JHSDK (1.4.9):
-    - GDTMobSDK (= 4.13.50)
+  - XYZAd/JHSDK (1.5.2):
+    - GDTMobSDK (= 4.13.61)
     - XYZAd/XMAdSDK
-  - XYZAd/JRTTSDK (1.4.9):
-    - Ads-CN (= 4.2.5.6)
+  - XYZAd/JRTTSDK (1.5.2):
+    - Ads-CN (= 4.3.0.5)
     - XYZAd/XMAdSDK
-  - XYZAd/KSMOBSDK (1.4.9):
+  - XYZAd/KSMOBSDK (1.5.2):
     - XYZAd/XMAdSDK
-  - XYZAd/MTGSDK (1.4.9):
+  - XYZAd/MTGSDK (1.5.2):
     - MintegralAdSDK/All (= 7.1.1)
     - XYZAd/XMAdSDK
-  - XYZAd/SIGMOBSDK (1.4.9):
+  - XYZAd/SIGMOBSDK (1.5.2):
     - SigmobAd-iOS (= 3.5.3)
     - XYZAd/XMAdSDK
-  - XYZAd/XMAdSDK (1.4.9)
-  - XYZAd/YouKeYingSDK (1.4.9):
+  - XYZAd/UMengSDK (1.5.2):
+    - UMCommon (= 7.3.6)
+    - UMDevice (= 2.2.0)
+    - UMUnionSDK (= 1.3.0)
+    - XYZAd/XMAdSDK
+  - XYZAd/UnityAdSDK (1.5.2):
+    - UnityAds (= 4.0.0)
+    - XYZAd/XMAdSDK
+  - XYZAd/XMAdSDK (1.5.2)
+  - XYZAd/YouKeYingSDK (1.5.2):
     - XYZAd/XMAdSDK
   - YYCache (1.0.4)
   - YYImage (1.0.4):
@@ -91,55 +118,67 @@ PODS:
 
 DEPENDENCIES:
   - Masonry
-  - XYZAd/AdColonySDK (from `../../sdk_ios_pod`)
-  - XYZAd/BDSDK (from `../../sdk_ios_pod`)
-  - XYZAd/FBAdSDK (from `../../sdk_ios_pod`)
-  - XYZAd/GADAdSDK (from `../../sdk_ios_pod`)
-  - XYZAd/GDTSDK (from `../../sdk_ios_pod`)
-  - XYZAd/HZSDK (from `../../sdk_ios_pod`)
-  - XYZAd/IronSourceSDK (from `../../sdk_ios_pod`)
-  - XYZAd/JDSDK (from `../../sdk_ios_pod`)
-  - XYZAd/JHSDK (from `../../sdk_ios_pod`)
-  - XYZAd/JRTTSDK (from `../../sdk_ios_pod`)
-  - XYZAd/KSMOBSDK (from `../../sdk_ios_pod`)
-  - XYZAd/MTGSDK (from `../../sdk_ios_pod`)
-  - XYZAd/SIGMOBSDK (from `../../sdk_ios_pod`)
-  - XYZAd/XMAdSDK (from `../../sdk_ios_pod`)
-  - XYZAd/YouKeYingSDK (from `../../sdk_ios_pod`)
+  - XYZAd (= 1.5.2)
+  - XYZAd/AdColonySDK (= 1.5.2)
+  - XYZAd/ALSDK (= 1.5.2)
+  - XYZAd/BDSDK (= 1.5.2)
+  - XYZAd/FBAdSDK (= 1.5.2)
+  - XYZAd/GADAdSDK (= 1.5.2)
+  - XYZAd/GDTSDK (= 1.5.2)
+  - XYZAd/HZSDK (= 1.5.2)
+  - XYZAd/IronSourceSDK (= 1.5.2)
+  - XYZAd/JDSDK (= 1.5.2)
+  - XYZAd/JHSDK (= 1.5.2)
+  - XYZAd/JRTTSDK (= 1.5.2)
+  - XYZAd/KSMOBSDK (= 1.5.2)
+  - XYZAd/MTGSDK (= 1.5.2)
+  - XYZAd/SIGMOBSDK (= 1.5.2)
+  - XYZAd/UMengSDK (= 1.5.2)
+  - XYZAd/UnityAdSDK (= 1.5.2)
+  - XYZAd/YouKeYingSDK (= 1.5.2)
   - YYWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AdColony
     - Ads-CN
+    - AppLovinSDK
     - BaiduMobAdSDK
+    - BURelyFoundation
     - GDTMobSDK
     - IronSourceSDK
     - Masonry
     - MintegralAdSDK
     - SigmobAd-iOS
+    - UMCommon
+    - UMDevice
+    - UMUnionSDK
+    - UnityAds
+    - XYZAd
     - YYCache
     - YYImage
     - YYWebImage
 
-EXTERNAL SOURCES:
-  XYZAd:
-    :path: "../../sdk_ios_pod"
-
 SPEC CHECKSUMS:
   AdColony: 970af2bff1e500c8a681bfcbd85f8054c0f57071
-  Ads-CN: 8c9c6be8bafe646514fc30dc266fddc2733a854f
+  Ads-CN: b6b1294ba4e938168475ceacc786f7263d8b9747
+  AppLovinSDK: 7965663198de61735b77106702ca8e320299e53c
   BaiduMobAdSDK: 1a46c3043d27cc28d835460e956233e6b8a24b66
-  GDTMobSDK: 59aac3a8f80fb311aee13696754283390bd64c91
+  BURelyFoundation: 5e7f811867d3ee91ed20e426c505e31c55674256
+  GDTMobSDK: 1c0df1d9ae59d717746c5b79e593578ac487ac92
   IronSourceSDK: f8c439ff772b2b6f4b826054d661238d4d3c4d53
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MintegralAdSDK: 6f4a39e4801633686b58583e3974b8c7c5c064ef
   SigmobAd-iOS: 3b63fe0d3db023fad72bebe82cddd29e0b44ab40
-  XYZAd: d500addc8d44df9f4012f38d9d2b421a39ca2964
+  UMCommon: c61df8457c275afd4f8a2fca10c7446d66220ac0
+  UMDevice: 2221685f316f781e45a22305256ea5af6f3a4093
+  UMUnionSDK: 4efc7f404e958955aa255b49bc0a64ad369cf3d0
+  UnityAds: 9649e17d2d255f91c0a84e00062a0d07d8fba8a5
+  XYZAd: 40e2c1cf70655f063f75f58b0c95d703323bebfa
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 5c3ce36761830b4bec081656e6429f86e5abbcf9
+PODFILE CHECKSUM: ac85771836ae5bd461eb35101363a324f2a7592f
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.3

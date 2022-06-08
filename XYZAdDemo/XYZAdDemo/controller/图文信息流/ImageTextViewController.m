@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *installButton;
 @property (weak, nonatomic) IBOutlet UILabel *appNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
+@property (weak, nonatomic) IBOutlet YYAnimatedImageView *pendantView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pendantViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pendantViewWidth;
 
 @end
 
@@ -50,13 +53,14 @@
 - (IBAction)load:(id)sender {
     XMAdImgTextParam *param = [XMAdImgTextParam new];
     param.position = kDemoImgText;//imgtext//bigset
-    param.expectAdSize = CGSizeMake(1280, 720);
+    param.expectAdSize = CGSizeMake(720, 1280);
     BeginLoading
     [XMImgTextAdProvider imgTextAdModelWithParam:param completion:^(XMImgTextAd * _Nullable model, XMError *_Nullable error) {
         EndLoading
         if (model) {
             //            self->_imageView.image = nil;
             //            self->_titleLabel.text = nil;
+            
             self->_lastAd = model;
         }
         NSString *des = error ? error.userInfo[NSLocalizedDescriptionKey] : @"广告拉取成功";
@@ -97,7 +101,7 @@
             make.edges.mas_equalTo(UIEdgeInsetsZero);
         }];
     } else {
-        NSArray *array = @[self.imageView,self.titleLabel,self.installButton,self.desLabel,self.appNameLabel,self.iconImageView,self.logoImageView];
+        NSMutableArray *array = @[self.imageView,self.titleLabel,self.installButton,self.desLabel,self.appNameLabel,self.iconImageView,self.logoImageView].mutableCopy;
                 
         self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_imgTextAd.materialMeta.coverImage.imgURL]]];
         _titleLabel.text = _imgTextAd.materialMeta.adTitle;
@@ -111,7 +115,7 @@
         CGFloat imageHeight = image.imgHeight / radio;
         self.imageView.layer.masksToBounds = YES;
         self.imageView.layer.cornerRadius = 20;
-        
+        [_imgTextAd.materialMeta.videoView muteEnable:YES];
         if (_imgTextAd.materialMeta.imageMode == XMFeedADMode_VideoImage) {
             [self.bgView addSubview:_imgTextAd.materialMeta.videoView];
             _imgTextAd.materialMeta.videoView.backgroundColor = UIColor.yellowColor;
@@ -122,6 +126,21 @@
                 make.height.mas_equalTo(imageHeight);
             }];
         }
+        
+        if ([_imgTextAd.materialMeta.extraInfo isKindOfClass:[NSDictionary class]] && [_imgTextAd.materialMeta.extraInfo[@"widget_info"] isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *widget_info = _imgTextAd.materialMeta.extraInfo[@"widget_info"];
+            CGFloat width = [widget_info[@"width"] doubleValue] / [UIScreen mainScreen].scale;
+            CGFloat height = [widget_info[@"height"] doubleValue] / [UIScreen mainScreen].scale;
+//            NSInteger type = [widget_info[@"type"] integerValue];
+            NSString *pendantUrl = widget_info[@"url"];
+            self.pendantViewWidth.constant = width;
+            self.pendantViewHeight.constant = height;
+            [self.pendantView yy_setImageWithURL:[NSURL URLWithString:pendantUrl] options:YYWebImageOptionUseNSURLCache];
+            [array addObject:self.pendantView];
+        }
+        
+
+        
         [self.bgView bringSubviewToFront:self.logoImageView];
         [_imgTextAd registerAdContainer:self.bgView ableClickViews:array presentVC:self];
     }

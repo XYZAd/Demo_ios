@@ -32,11 +32,9 @@
 		02C537B127914556009FD8BA /* NativeInterisititialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C537AC27914555009FD8BA /* NativeInterisititialViewController.xib */; };
 		02C537B227914556009FD8BA /* XMNativeIntersititialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C537AD27914555009FD8BA /* XMNativeIntersititialAdViewController.m */; };
 		02D1C4D926EF25AD00E9E124 /* BannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */; };
-		02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BA26EF25AC00E9E124 /* ImageTextViewController.xib */; };
 		02D1C4DC26EF25AD00E9E124 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4BE26EF25AC00E9E124 /* TableViewCell.m */; };
 		02D1C4DD26EF25AD00E9E124 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4BF26EF25AC00E9E124 /* VideoViewController.xib */; };
 		02D1C4DE26EF25AD00E9E124 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4C326EF25AC00E9E124 /* BannerViewController.m */; };
-		02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4C626EF25AD00E9E124 /* ImageTextViewController.m */; };
 		02D1C4E226EF25AD00E9E124 /* XMLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4C726EF25AD00E9E124 /* XMLoading.m */; };
 		02D1C4E426EF25AD00E9E124 /* XMIntersititialAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4C926EF25AD00E9E124 /* XMIntersititialAdViewController.xib */; };
 		02D1C4E526EF25AD00E9E124 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D1C4CA26EF25AD00E9E124 /* VideoViewController.m */; };
@@ -49,6 +47,8 @@
 		02D1C4ED26EF25AD00E9E124 /* DrawAdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4D526EF25AD00E9E124 /* DrawAdViewController.xib */; };
 		02D1C4EE26EF25AD00E9E124 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D1C4D826EF25AD00E9E124 /* SplashViewController.xib */; };
 		240248147FFE64A1DED02D32 /* Pods_XYZAdDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C5F7C6D2BF588C057EB3BB /* Pods_XYZAdDemo.framework */; };
+		6AEB88802850449D000679AB /* ImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AEB887D2850449D000679AB /* ImageTextViewController.xib */; };
+		6AEB88812850449D000679AB /* ImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEB887F2850449D000679AB /* ImageTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +96,6 @@
 		02D1C4B726EF25AC00E9E124 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		02D1C4B826EF25AC00E9E124 /* DrawAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawAdViewController.h; sourceTree = "<group>"; };
 		02D1C4B926EF25AC00E9E124 /* BannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BannerViewController.xib; sourceTree = "<group>"; };
-		02D1C4BA26EF25AC00E9E124 /* ImageTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextViewController.xib; sourceTree = "<group>"; };
 		02D1C4BC26EF25AC00E9E124 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		02D1C4BE26EF25AC00E9E124 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		02D1C4BF26EF25AC00E9E124 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		02D1C4C126EF25AC00E9E124 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		02D1C4C226EF25AC00E9E124 /* XMIntersititialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMIntersititialAdViewController.h; sourceTree = "<group>"; };
 		02D1C4C326EF25AC00E9E124 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		02D1C4C626EF25AD00E9E124 /* ImageTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextViewController.m; sourceTree = "<group>"; };
 		02D1C4C726EF25AD00E9E124 /* XMLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLoading.m; sourceTree = "<group>"; };
 		02D1C4C926EF25AD00E9E124 /* XMIntersititialAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMIntersititialAdViewController.xib; sourceTree = "<group>"; };
 		02D1C4CA26EF25AD00E9E124 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
@@ -118,9 +116,11 @@
 		02D1C4D426EF25AD00E9E124 /* FullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullScreenViewController.m; sourceTree = "<group>"; };
 		02D1C4D526EF25AD00E9E124 /* DrawAdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawAdViewController.xib; sourceTree = "<group>"; };
 		02D1C4D626EF25AD00E9E124 /* XMLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLoading.h; sourceTree = "<group>"; };
-		02D1C4D726EF25AD00E9E124 /* ImageTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextViewController.h; sourceTree = "<group>"; };
 		02D1C4D826EF25AD00E9E124 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		2637A67A417F81EC126B84CD /* Pods-XYZAdDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYZAdDemo.release.xcconfig"; path = "Target Support Files/Pods-XYZAdDemo/Pods-XYZAdDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6AEB887D2850449D000679AB /* ImageTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextViewController.xib; sourceTree = "<group>"; };
+		6AEB887E2850449D000679AB /* ImageTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextViewController.h; sourceTree = "<group>"; };
+		6AEB887F2850449D000679AB /* ImageTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextViewController.m; sourceTree = "<group>"; };
 		8FC10771AE73A86B302F9EC8 /* Pods-XYZAdDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYZAdDemo.debug.xcconfig"; path = "Target Support Files/Pods-XYZAdDemo/Pods-XYZAdDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E5C5F7C6D2BF588C057EB3BB /* Pods_XYZAdDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XYZAdDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,9 +157,9 @@
 		028B4EAD27BB4B5D00B7E3E9 /* 图文信息流 */ = {
 			isa = PBXGroup;
 			children = (
-				02D1C4D726EF25AD00E9E124 /* ImageTextViewController.h */,
-				02D1C4C626EF25AD00E9E124 /* ImageTextViewController.m */,
-				02D1C4BA26EF25AC00E9E124 /* ImageTextViewController.xib */,
+				6AEB887E2850449D000679AB /* ImageTextViewController.h */,
+				6AEB887F2850449D000679AB /* ImageTextViewController.m */,
+				6AEB887D2850449D000679AB /* ImageTextViewController.xib */,
 				02D1C4CD26EF25AD00E9E124 /* TableViewCell.h */,
 				02D1C4BE26EF25AC00E9E124 /* TableViewCell.m */,
 				02BB2084274F2D3500F99189 /* AdTableViewCell.h */,
@@ -416,10 +416,10 @@
 				02D1C4E726EF25AD00E9E124 /* FullScreenViewController.xib in Resources */,
 				0280936727CCA72400823C7B /* UniversalViewController.xib in Resources */,
 				025CEF96276983EC008535B5 /* CustomViewController.xib in Resources */,
+				6AEB88802850449D000679AB /* ImageTextViewController.xib in Resources */,
 				028B4EAB27BB481F00B7E3E9 /* ImgTextCollectionViewCell.xib in Resources */,
 				02D1C4ED26EF25AD00E9E124 /* DrawAdViewController.xib in Resources */,
 				028B4EB927BB4DC600B7E3E9 /* 1644199624699079.mp4 in Resources */,
-				02D1C4DA26EF25AD00E9E124 /* ImageTextViewController.xib in Resources */,
 				02D1C4EE26EF25AD00E9E124 /* SplashViewController.xib in Resources */,
 				02D1C4D926EF25AD00E9E124 /* BannerViewController.xib in Resources */,
 				02C537B127914556009FD8BA /* NativeInterisititialViewController.xib in Resources */,
@@ -516,9 +516,9 @@
 				02C537B027914556009FD8BA /* NativeInterisititialViewController.m in Sources */,
 				0273CEE227E0601F006338B4 /* SplashHelper.m in Sources */,
 				02D1C4E626EF25AD00E9E124 /* DrawAdViewController.m in Sources */,
-				02D1C4E126EF25AD00E9E124 /* ImageTextViewController.m in Sources */,
 				0280936427CCA72400823C7B /* UniversalDrawAdView.m in Sources */,
 				02D1C4E926EF25AD00E9E124 /* SplashViewController.m in Sources */,
+				6AEB88812850449D000679AB /* ImageTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,35 +17,42 @@ targetsArray.each do |t|
         pod 'Masonry'
         pod 'YYWebImage'
         
-        # :path => '../../sdk_ios_pod'
-        pod 'XYZAd/XMAdSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd','1.5.2'
         #集成禾赞
-        pod 'XYZAd/HZSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/HZSDK', '1.5.2'
         #集成穿山甲
-        pod 'XYZAd/JRTTSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/JRTTSDK', '1.5.2'
         #集成百度
-        pod 'XYZAd/BDSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/BDSDK', '1.5.2'
         #集成广点通
-        pod 'XYZAd/GDTSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/GDTSDK', '1.5.2'
         #集成MTG
-        pod 'XYZAd/MTGSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/MTGSDK', '1.5.2'
         #集成SigmobAd
-        pod 'XYZAd/SIGMOBSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/SIGMOBSDK', '1.5.2'
         #集成快手
-        pod 'XYZAd/KSMOBSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/KSMOBSDK', '1.5.2'
         #集成聚合
-        pod 'XYZAd/JHSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/JHSDK', '1.5.2'
         #集成游可盈
-        pod 'XYZAd/YouKeYingSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/YouKeYingSDK', '1.5.2'
         #集成京准通
-        pod 'XYZAd/JDSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/JDSDK', '1.5.2'
         #集成IronSource
-        pod 'XYZAd/IronSourceSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/IronSourceSDK', '1.5.2'
         #集成AdColony
-        pod 'XYZAd/AdColonySDK', :path => '../../sdk_ios_pod'
-        #集成FB
-        pod 'XYZAd/FBAdSDK', :path => '../../sdk_ios_pod'
-        pod 'XYZAd/GADAdSDK', :path => '../../sdk_ios_pod'
+        pod 'XYZAd/AdColonySDK', '1.5.2'
+        #集成友盟
+        pod 'XYZAd/UMengSDK', '1.5.2'
+        #集成UnityAds
+        pod 'XYZAd/UnityAdSDK', '1.5.2'
+        #集成Facebook
+        pod 'XYZAd/FBAdSDK', '1.5.2'
+        #集成谷歌SDK
+        pod 'XYZAd/GADAdSDK', '1.5.2'
+        #集成AppLovin
+        pod 'XYZAd/ALSDK', '1.5.2'
+
     end
 end
 
